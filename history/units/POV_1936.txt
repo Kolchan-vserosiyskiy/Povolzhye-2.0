@@ -5,7 +5,8 @@ division_names_group = POV_INF_01
 regiments = {
 infantry = { x = 0 y = 0 }
 infantry = { x = 0 y = 1 }
-infantry = { x = 0 y = 2 }
+infantry = { x = 1 y = 0 }
+infantry = { x = 1 y = 1 }
 }
 }
 
@@ -16,7 +17,7 @@ is_name_ordered = no
 }
 location = 3282
 division_template = "Krestyane"
-start_experience_factor = 0.0
+start_experience_factor = 0.12
 start_equipment_factor = 0.7
 }
 
@@ -28,7 +29,7 @@ division = {
 	}
 	location = 11281
 	division_template = "Krestyane"
-	start_experience_factor = 0.0
+	start_experience_factor = 0.32
 	start_equipment_factor = 0.7
 	}
 
@@ -39,7 +40,7 @@ division = {
 		}
 		location = 4356
 		division_template = "Krestyane"
-		start_experience_factor = 0.0
+		start_experience_factor = 0.18
 		start_equipment_factor = 0.7
 		}
 		
@@ -50,7 +51,7 @@ division = {
 		}
 		location = 392
 		division_template = "Krestyane"
-		start_experience_factor = 0.0
+		start_experience_factor = 0.1
 		start_equipment_factor = 0.7
 		}
 division = {
@@ -60,7 +61,7 @@ division = {
 			}
 			location = 4354
 			division_template = "Krestyane"
-			start_experience_factor = 0.0
+			start_experience_factor = 0.2
 			start_equipment_factor = 0.7
 			}
 					
@@ -78,6 +79,6 @@ creator = "POV"
 }
 requested_factories = 2		
 progress = 0.19
-efficiency = 100
+efficiency = 13
 }
 }

@@ -42,9 +42,9 @@ POV_INF_01 =
 	division_types = { "infantry" }
 
 	# Number reservation system will tie to another group.
-	#link_numbering_with = { ARM_GAR_01 }
+	#link_numbering_with = { POV_INF_01 }
 
-	fallback_name = "% Povozhskaya Krestyanskaya Div."
+	fallback_name = "Povozhskaya Krestyanskaya Div."
 
 	# Names with numbers (only one number per entry). 
 	# It's okay to have gaps in numbering.

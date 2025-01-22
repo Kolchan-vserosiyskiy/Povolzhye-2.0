@@ -31,7 +31,7 @@ y = 2
 completion_reward = { add_equipment_to_stockpile = {
 type = infantry_equipment
 amount = 10000
-producer = ENG }  
+producer = SWE }  
 add_political_power = -20 }
 }
 
@@ -44,7 +44,29 @@ focus = POV_Krestyanskiy_bunt
 }
 x = 3
 y = 1
-completion_reward = { }
+completion_reward = { 
+division_template = {
+    name = "Desertiry"
+    is_locked = yes
+    division_names_group = POV_INF_1
+    priority = 1
+    template_counter = 1
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+    }
+    support = { }
+    }
+    capital_scope = {
+        create_unit = {
+        division = "name = \"Desertiry\" division_template = \"Desertiry\" start_experience_factor = 0.6 start_equipment_factor = 0.93"
+        owner = POV
+        count = 3
+    }
+    }
+    }       
 }
 
 focus = {
@@ -133,50 +155,14 @@ completion_reward = {
                 instant_build = yes
                 }
             }
-11225 = {
+capital_scope= {
     create_unit = {
         division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-        count = 4
         owner = POV
+        count = 21
     }
-}
-    12175 ={
-        create_unit = {
-            division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-            count = 2
-            owner = POV
-            }
-        }
-        6338 = {
-            create_unit = {
-                division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-                count = 4
-                owner = POV
-    }
-}
-            9259 = {
-                create_unit = {
-                    division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-                    count = 2
-                    owner = POV
-        }
-    }  
-                12128 = {
-                    create_unit = {
-                        division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-                        count = 3
-                        owner = POV
-            } 
-                }
-                    1278 = {
-                        create_unit = {
-                            division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-                            count = 4
-                            owner = POV
-                } 
-                    } #В итоге 16 дивизий  
+                    } 
     }   
-}
 }
 
 focus = {
@@ -255,4 +241,5 @@ y = 5
 completion_reward = {
 
  }
+}
 }
