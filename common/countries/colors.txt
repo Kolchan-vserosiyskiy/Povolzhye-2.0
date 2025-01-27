@@ -15,6 +15,7 @@ SOV = {
 POV = {
 	color = rgb { 242 169 17 }
 	color_ui = rgb { 194 134 11 }
+	
 }
 FRA = {
 	color = rgb { 57 113 228 }
