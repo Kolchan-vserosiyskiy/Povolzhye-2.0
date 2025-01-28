@@ -1,0 +1,6 @@
+SpriteTypes = {
+	spriteType = {
+		name = "GFX_idea_nazists"
+		texturefile = "gfx/interface/ideas/ideas_pov_nazists.dds"
+	}
+}

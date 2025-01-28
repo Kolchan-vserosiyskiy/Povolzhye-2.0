@@ -1,5 +1,8 @@
 ﻿l_russian:
 
+ 
+ POV_nazists: "Присутствие фашистских организаций"
+ POV_nazists_desc: "После появления"
  SOV_uncontrol_army: "Неконтролируемая армия"
  SOV_uncontrol_army_desc: "После начала белого восстания контроль над армией был потерян"
  fascist_influence: "Влияние фашизма"

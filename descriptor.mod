@@ -1,6 +1,6 @@
-version="1.15.1"
+version="1.15.4"
 tags={
 	"Alternative History"
 }
 name="Povolzhye"
-supported_version="1.15.2"
+supported_version="1.15.4"

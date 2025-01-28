@@ -48,7 +48,7 @@ completion_reward = {
 division_template = {
     name = "Desertiry"
     is_locked = yes
-    division_names_group = POV_INF_1
+    division_names_group = POV_INF_02
     priority = 1
     template_counter = 1
     regiments = {
@@ -78,7 +78,16 @@ focus = POV_Agitaciya_v_tylu_vraga
 }
 x = 1
 y = 2
-completion_reward = { }
+completion_reward = {
+    add_ideas = POV_nazists
+    capital_scope = {    
+        create_unit = {
+            division = "name = \"nazists\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
+            owner = POV
+            count = 3
+        }
+    }
+ }
 }
 
 focus = {
@@ -90,7 +99,15 @@ focus = POV_Agitaciya_v_tylu_vraga
 }
 x = 3
 y = 2
-completion_reward = { }
+completion_reward = { 
+    capital_scope = {    
+    create_unit = {
+        division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
+        owner = POV
+        count = 19
+    }
+}
+}
 }
 
 focus = {
@@ -155,13 +172,6 @@ completion_reward = {
                 instant_build = yes
                 }
             }
-capital_scope= {
-    create_unit = {
-        division = "name = \"Krestyanskiy brigada\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-        owner = POV
-        count = 21
-    }
-                    } 
     }   
 }
 
