@@ -119,7 +119,12 @@ focus = POV_Krestyanskiy_bunt
 }
 x = 9
 y = 1
-completion_reward = { }
+completion_reward = {
+    add_equipment_to_stockpile = {
+    type = medium_tank_chassis_1
+    amount = 100
+}
+ }
 }
 
 focus = {
@@ -132,8 +137,12 @@ focus = POV_Krestyanskiy_bunt
 x = 18
 y = 1
 completion_reward = { 
-    add_political_power = 100
- }
+add_equipment_to_stockpile = {
+    type = small_plane_cas_airframe
+    amount = 100
+    variant_name = "Plane From USSR"
+}
+}
 }
 
 focus = {
