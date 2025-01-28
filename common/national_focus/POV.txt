@@ -174,7 +174,7 @@ completion_reward = {
             }
 
 
-            299 ={
+            651 ={
                 add_building_construction ={
                 type = arms_factory
                 level = 1
