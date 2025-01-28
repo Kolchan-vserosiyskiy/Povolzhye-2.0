@@ -79,7 +79,9 @@ focus = POV_Agitaciya_v_tylu_vraga
 x = 1
 y = 2
 completion_reward = {
-    add_ideas = POV_nazists
+    add_ideas = {
+       POV_nazists
+    }
     capital_scope = {    
         create_unit = {
             division = "name = \"nazists\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
@@ -117,14 +119,14 @@ cost = 0.50
 prerequisite = {
 focus = POV_Krestyanskiy_bunt
 }
-x = 9
-y = 1
+x = 10
+y = 2
 completion_reward = {
     add_equipment_to_stockpile = {
     type = medium_tank_chassis_1
     amount = 100
 }
- }
+}
 }
 
 focus = {
@@ -261,4 +263,16 @@ completion_reward = {
 
  }
 }
+
+focus = {
+    id = POV_Unite_Peoples
+    icon = GFX_goal_unknown
+    cost = 14.3
+    prerequisite = {
+    focus = POV_Krestyanskiy_bunt
+    }
+    x = 6
+    y = 3
+    completion_reward = { unlock_decision_category_tooltip = POVnationalization }
+    }
 }

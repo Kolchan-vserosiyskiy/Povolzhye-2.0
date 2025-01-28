@@ -1,0 +1,18 @@
+################
+#### POVOLZHYE ####
+################
+
+POVnationalization = {
+
+	icon = decision_category_spr_the_seeds_of_revolution.gfx
+
+	priority = 10
+
+	visible = {
+		has_completed_focus = POV_Unite_Peoples
+	}
+
+	allowed = {
+		original_tag = POV
+	}
+}
