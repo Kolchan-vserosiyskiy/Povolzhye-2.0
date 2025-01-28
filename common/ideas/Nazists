@@ -4,12 +4,9 @@ ideas = {
 
             removal_cost = -1
 
-            allowed = {
-                always = no
-            }
+            picture = idea_nazists.gfx
 
-            picture = GFX_idea_nazists
-            
-        }
+            modifier = { fascism_drift = 0.01 }
     }
+}
 }

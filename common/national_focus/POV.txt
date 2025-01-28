@@ -79,9 +79,7 @@ focus = POV_Agitaciya_v_tylu_vraga
 x = 1
 y = 2
 completion_reward = {
-    add_ideas = {
-       POV_nazists
-    }
+    add_ideas = POV_nazists 
     capital_scope = {    
         create_unit = {
             division = "name = \"nazists\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
