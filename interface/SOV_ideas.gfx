@@ -1,6 +1,6 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_idea_sovuncontrol_army"
+		name = "idea_sovuncontrol_army"
 		texturefile = "gfx/interface/ideas/idea_sov_uncontrol_army.dds"
 	}
 }
