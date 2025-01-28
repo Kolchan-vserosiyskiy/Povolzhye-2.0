@@ -20,8 +20,7 @@ declare_war_on = {
     type = annex_everything } } }
 
 focus = {
-id = POV_Buy_weapon
-icon = GFX_goal_unknown
+id = POV_Buy_weaponЫ
 cost = 1.00
 prerequisite = {
 focus = POV_Get_gold
@@ -79,16 +78,14 @@ focus = POV_Agitaciya_v_tylu_vraga
 x = 1
 y = 2
 completion_reward = {
-    add_ideas = POV_nazists 
+    add_ideas = POV_nazists
     capital_scope = {    
-        create_unit = {
             division = "name = \"nazists\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
             owner = POV
             count = 3
         }
     }
  }
-}
 
 focus = {
 id = POV_Christianskiye_divisii
@@ -156,7 +153,7 @@ x = 14
 y = 2
 completion_reward = { 
     add_political_power = -20
-    256 ={
+    256 = {
         add_building_construction ={
         type = arms_factory
         level = 1
@@ -164,7 +161,7 @@ completion_reward = {
         }
         }
 
-        251 ={
+        251 = {
             add_building_construction ={
             type = arms_factory
             level = 1
@@ -174,7 +171,7 @@ completion_reward = {
             }
 
 
-            651 ={
+            651 = {
                 add_building_construction ={
                 type = arms_factory
                 level = 1
@@ -257,9 +254,7 @@ focus = POV_Send_gold
 }
 x = 19
 y = 5
-completion_reward = {
-
- }
+completion_reward = { }
 }
 
 focus = {
