@@ -1,4 +1,4 @@
-﻿capital = 398
+﻿capital = 249
 
 oob = "POV_1936"
 
@@ -32,3 +32,5 @@ communism = 1
 }
 
 set_stability = 0.83
+
+SOV_uncontrol_army

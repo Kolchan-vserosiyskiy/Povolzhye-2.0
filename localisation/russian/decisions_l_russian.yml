@@ -1,6 +1,7 @@
 ﻿l_russian:
- POVnationalization: "Привлечение нарадов России к борьбе"
- POV_nat_north: "Привлечь Ненецев, Ямалов и Коми"
+ POVnationalization: "Установление контроля над регионами"
+ POV_nat_centre: "Центральная Россия" 
+ POV_nat_north: "Народы севера"
  DECISIONVIEW_TITLE: "События и решения"
  DECISIONSVIEW_EVENT_HEADER: "События"
  POPUP_NEWS: "Новости"

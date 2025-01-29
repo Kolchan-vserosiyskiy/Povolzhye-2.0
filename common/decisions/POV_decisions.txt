@@ -37,9 +37,6 @@ POVnationalization = {
 		factor = 1
 	}
 }
-}
-
-POVnationalization = {
 	POV_nat_centre = {
 		icon = decision_generic_speech
 		available = {

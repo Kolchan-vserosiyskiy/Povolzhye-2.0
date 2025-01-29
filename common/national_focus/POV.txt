@@ -82,9 +82,11 @@ y = 2
 completion_reward = {
     add_ideas = POV_nazists
     capital_scope = {  
-            division = "name = \"nazists\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-            owner = POV
-            count = 3
+            create_unit = {
+                division = "name = \"nazists\" division_template = \"nazists\ start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = POV
+                count = 3
+            }
         }
     }
  }
