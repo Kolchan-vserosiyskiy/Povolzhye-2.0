@@ -39,7 +39,7 @@ add_political_power = -20 }
 
 focus = {
 id = POV_Agitaciya_v_tylu_vraga
-icon = GFX_goal_unknown
+icon = GFX_focus_FIN_parmis_devils
 cost = 0.15
 prerequisite = {
 focus = POV_Krestyanskiy_bunt
@@ -130,7 +130,7 @@ completion_reward = {
 
 focus = {
 id = POV_Get_gold
-icon = GFX_goal_unknown
+icon = GFX_focus_usa_reestablish_the_gold_standard
 cost = 0.40
 prerequisite = {
 focus = POV_Krestyanskiy_bunt
@@ -148,7 +148,7 @@ add_equipment_to_stockpile = {
 
 focus = {
 id = POV_Invest_gold_in_manufactures
-icon = GFX_goal_unknown
+icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
 cost = 3.00
 prerequisite = {
 focus = POV_Get_gold
@@ -263,7 +263,7 @@ completion_reward = { }
 
 focus = {
     id = POV_Unite_Peoples
-    icon = GFX_goal_unknown
+    icon = GFX_focus_ETH_freedom_at_gunpoint
     cost = 14.3
     prerequisite = {
     focus = POV_Krestyanskiy_bunt
