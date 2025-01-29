@@ -13,6 +13,7 @@ tech_support = 1
 tech_mountaineers = 1
 tech_trucks = 1
 basic_train = 1
+artillery0 = 1
 }
 
 recruit_character = POV_Kalinin
@@ -33,3 +34,5 @@ communism = 1
 }
 
 set_stability = 0.83
+
+
