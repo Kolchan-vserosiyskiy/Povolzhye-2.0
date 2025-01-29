@@ -1,0 +1,7 @@
+SpriteTypes = {
+
+	spriteType = {
+		name = "GFX_decision_generic_speech"
+		texturefile = "gfx/interface/decisions/decision_generic_speech.dds"
+	}
+} 

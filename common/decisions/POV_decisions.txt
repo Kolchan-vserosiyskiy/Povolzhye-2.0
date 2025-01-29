@@ -1,30 +1,35 @@
 POVnationalization = {
 	POV_nat_north = {
-		icon = decision_generic_speech.gfx
-		available = { tag = POV }
+		icon = decision_generic_speech
+		available = { 
+		tag = POV
+		controls_state = 397
+		controls_state = 581
+		controls_state = 580
+		controls_state = 825
+		controls_state = 579 
+		controls_state = 262
+		 			}
 		cost = 100
 		fire_only_once = yes
-		remove_effect = { }
-		available = {
-		}
 		complete_effect = { 
 		397 = {
-			add_claim_by = POV
+			add_core_of= POV
 			}
 		581 = {
-			add_claim_by = POV
+			add_core_of = POV
 			}
 		580 = {
-			add_claim_by = POV
+			add_core_of  = POV
 			}
 		825 = {
-			add_claim_by = POV
+			add_core_of = POV
 			}
 		579 = {
-			add_claim_by = POV
+			add_core_of = POV
 			}
 		262 = {
-			add_claim_by = POV
+			add_core_of = POV
 			}
 		
 	}
@@ -32,4 +37,39 @@ POVnationalization = {
 		factor = 1
 	}
 }
+}
+
+POVnationalization = {
+	POV_nat_centre = {
+		icon = decision_generic_speech
+		available = {
+		tag = POV
+	 	controls_state = 252
+		controls_state = 833
+		controls_state = 400
+		controls_state = 255
+		controls_state = 351
+					}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+		252 = 	{
+			add_core_of = POV
+			}
+		833 = 	{
+			add_core_of = POV
+			}
+		400 = 	{
+			add_core_of = POV
+			}
+		255 = 	{
+			add_core_of = POV
+			}
+		351 = 	{
+			add_core_of = POV
+		}
+						  }
+		
+	}
+	
 }

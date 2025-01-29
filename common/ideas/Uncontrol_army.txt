@@ -9,7 +9,7 @@ ideas = {
 			}
 
 
-			picture = idea_sov_uncontrol_army
+			picture = sov_uncontrol_army
 
 			modifier = {
 				army_attack_factor = -0.3

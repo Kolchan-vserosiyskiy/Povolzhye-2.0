@@ -8,6 +8,7 @@ tag = POV
 }
 }
 default = no
+
 focus = {
 id = POV_Krestyanskiy_bunt
 icon = GFX_focus_ARG_air_force
@@ -17,10 +18,12 @@ y = 0
 completion_reward = { add_political_power = 100 add_war_support = 0.4 add_manpower = 40000 
 declare_war_on = {
     target = SOV
-    type = annex_everything } } }
+    type = annex_everything }
+ }
+}
 
 focus = {
-id = POV_Buy_weaponЫ
+id = POV_Buy_weapon
 cost = 1.00
 prerequisite = {
 focus = POV_Get_gold
@@ -58,9 +61,10 @@ division_template = {
     }
     support = { }
     }
+
     capital_scope = {
         create_unit = {
-        division = "name = \"Desertiry\" division_template = \"Desertiry\" start_experience_factor = 0.6 start_equipment_factor = 0.93"
+        division = "name = \"Desertiry\" division_template = \"Desertiry\" start_experience_factor = 0.6 start_equipment_factor = 0.79"
         owner = POV
         count = 3
     }
@@ -72,14 +76,12 @@ focus = {
 id = POV_Get_fashist_women
 icon = GFX_focus_SOV_womens_fascist_movement
 cost = 0.50
-prerequisite = {
-focus = POV_Agitaciya_v_tylu_vraga
-}
+prerequisite = { focus = POV_Agitaciya_v_tylu_vraga }
 x = 1
 y = 2
 completion_reward = {
     add_ideas = POV_nazists
-    capital_scope = {    
+    capital_scope = {  
             division = "name = \"nazists\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
             owner = POV
             count = 3
