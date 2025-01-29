@@ -23,6 +23,7 @@ last_election = "1935.12.31"
 election_frequency = 48
 elections_allowed = no
 }
+army_experience = 25
 
 set_popularities = {
 neutrality = 11

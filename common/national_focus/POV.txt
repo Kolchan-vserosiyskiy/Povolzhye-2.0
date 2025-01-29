@@ -120,13 +120,15 @@ focus = POV_Krestyanskiy_bunt
 }
 x = 10
 y = 2
-completion_reward = {
-    add_equipment_to_stockpile = {
-    type = medium_tank_chassis_1
+completion_reward = {    
+add_equipment_to_stockpile = {
+    type = small_plane_cas_airframe
     amount = 100
+    variant_name = "Plane From USSR"
+        }
+    }
 }
-}
-}
+
 
 focus = {
 id = POV_Get_gold
@@ -137,13 +139,7 @@ focus = POV_Krestyanskiy_bunt
 }
 x = 18
 y = 1
-completion_reward = { 
-add_equipment_to_stockpile = {
-    type = small_plane_cas_airframe
-    amount = 100
-    variant_name = "Plane From USSR"
-}
-}
+completion_reward = { }
 }
 
 focus = {
@@ -194,7 +190,28 @@ focus = POV_Buy_weapon
 }
 x = 17
 y = 3
-completion_reward = { }
+completion_reward = { 
+    division_template = {
+        name = Наёмники
+        regiments = { 
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0  y = 1 }
+            infantry = { x = 0  y = 2 }
+            infantry = { x = 0  y = 3 }
+            infantry = { x = 1  y = 0 }
+            infantry = { x = 1  y = 1 }
+            infantry = { x = 1  y = 2 }
+            infantry = { x = 1  y = 3 }
+            artillery = { x = 3 y = 0 }
+        }
+        support = {
+           engineer = {
+            x = 0
+            y = 0
+           }
+        }
+    }
+}
 }
 
 focus = {
@@ -228,36 +245,6 @@ focus = POV_Buy_artillery_and_supply
 }
 x = 18
 y = 4
-completion_reward = { }
-}
-
-focus = {
-id = POV_Send_gold
-icon = GFX_goal_unknown
-cost = 2.00
-prerequisite = {
-focus = POV_Get_gold
-}
-mutually_exclusive = {
-focus = POV_Keep_gold 
-}
-x = 17
-y = 5
-completion_reward = { }
-}
-
-focus = {
-id = POV_Keep_gold
-icon = GFX_goal_unknown
-cost = 0.40
-prerequisite = {
-focus = POV_Get_gold
-}
-mutually_exclusive = {
-focus = POV_Send_gold
-}
-x = 19
-y = 5
 completion_reward = { }
 }
 
