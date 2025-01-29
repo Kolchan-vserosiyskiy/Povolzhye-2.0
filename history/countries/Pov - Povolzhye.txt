@@ -34,4 +34,4 @@ communism = 1
 
 set_stability = 0.83
 
-SOV_uncontrol_army
+
