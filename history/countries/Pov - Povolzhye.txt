@@ -34,6 +34,11 @@ democratic = 87
 communism = 1
 }
 
+declare_war_on = {
+	target = SOV
+	type = annex_everything
+}
+
 set_stability = 0.80
 
 

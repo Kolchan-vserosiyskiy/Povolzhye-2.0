@@ -16,7 +16,7 @@ POV_Krasnov = {
     name = "Pyotr Krasnov"
     portraits = {
         civilian = {
-            large = GFX_Portrait_Krasnov
+            large = GFX_Portrait_POV_Krasnov
         }
     }
     country_leader = {

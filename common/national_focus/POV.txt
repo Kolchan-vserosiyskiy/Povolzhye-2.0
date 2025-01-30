@@ -16,9 +16,6 @@ cost = 0.15
 x = 8
 y = 0
 completion_reward = { add_political_power = 100 add_war_support = 0.4 add_manpower = 40000 
-declare_war_on = {
-    target = SOV
-    type = annex_everything }
     add_ideas = POV_vosstaliease_pepla
  }
 }
@@ -74,41 +71,14 @@ division_template = {
 }
 
 focus = {
-id = POV_Get_fashist_women
+id = POV_Call_Everyone
 icon = GFX_focus_SOV_womens_fascist_movement
 cost = 0.50
 prerequisite = { focus = POV_Agitaciya_v_tylu_vraga }
-x = 1
-y = 2
+x = 3   
+y = 3
 completion_reward = {
     add_ideas = POV_nazists
-    capital_scope = {  
-            create_unit = {
-                division = "name = \"nazists\" division_template = \"nazists\ start_experience_factor = 1.0 start_equipment_factor = 1.0"
-                owner = POV
-                count = 3
-            }
-        }
-    }
- }
-
-focus = {
-id = POV_Christianskiye_divisii
-icon = GFX_focus_SOV_my_brothers_keeper
-cost = 0.70
-prerequisite = {
-focus = POV_Agitaciya_v_tylu_vraga
-}
-x = 3
-y = 2
-completion_reward = { 
-    capital_scope = {    
-    create_unit = {
-        division = "name = \"Крестьянская бригада\" division_template = \"Krestyane\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
-        owner = POV
-        count = 19
-    }
-}
 }
 }
 
@@ -140,7 +110,7 @@ focus = POV_Krestyanskiy_bunt
 }
 x = 18
 y = 1
-completion_reward = { }
+completion_reward = { add_political_power = 100 }
 }
 
 focus = {
@@ -261,10 +231,18 @@ focus = {
     icon = GFX_focus_ETH_freedom_at_gunpoint
     cost = 14.3
     prerequisite = {
-    focus = POV_Krestyanskiy_bunt
-    }
+    focus = POV_Krestyanskiy_bunt }
+    prerequisite = { focus = POV_Call_Everyone }
     x = 6
     y = 3
-    completion_reward = { unlock_decision_category_tooltip = POVnationalization }
+    completion_reward = { unlock_decision_category_tooltip = POVnationalization
+    capital_scope = {
+        create_unit = {
+            division = Krestyane
+            owner = POV
+            count = 5
+                }   
+            } 
+        }
     }
 }
