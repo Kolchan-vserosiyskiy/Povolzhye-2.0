@@ -4,12 +4,25 @@ name = "Fyodor Kalinin"
 portraits = {
 civilian = {
 large = GFX_Portrait_Kalinin
-}
-}
+                }
+         }  
 country_leader = {
 ideology = socialism
 expire = "1941.5.25"
 id = -1
+        }
+    }
+POV_Krasnov = {
+    name = "Pyotr Krasnov"
+    portraits = {
+        civilian = {
+            large = GFX_Portrait_Krasnov
+        }
+    }
+    country_leader = {
+        ideology = fascism_ideology
+        expire = "1947.1.16"
+        id = -1
+    }
 }
-}
-}
+}  

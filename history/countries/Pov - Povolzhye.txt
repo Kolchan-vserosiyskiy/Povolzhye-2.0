@@ -29,11 +29,11 @@ army_experience = 25
 
 set_popularities = {
 neutrality = 11
-fascism = 5
-democratic = 83
+fascism = 1
+democratic = 87
 communism = 1
 }
 
-set_stability = 0.83
+set_stability = 0.80
 
 

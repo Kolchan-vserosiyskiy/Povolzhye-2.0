@@ -3,5 +3,9 @@ spriteTypes = {
 spriteType = {
 name = "GFX_Portrait_Kalinin"
 texturefile = "gfx/leaders/POV/Portrait_POV_Kalinin.dds"
+	}				
 }
+spriteType = {
+	name = "GFX_Portrait_Krasnov"
+	texturefile = "gfx/leaders/POV/Portrait_POV_Krasnov.dds"
 }	
