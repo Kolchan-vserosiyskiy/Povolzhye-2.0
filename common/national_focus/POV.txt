@@ -17,7 +17,7 @@ x = 8
 y = 0
 completion_reward = { add_political_power = 100 add_war_support = 0.4 add_manpower = 40000 
     add_ideas = POV_vosstaliease_pepla
- }
+    }
 }
 
 focus = {
@@ -30,7 +30,7 @@ x = 18
 y = 2
 completion_reward = { add_equipment_to_stockpile = {
 type = infantry_equipment
-amount = 10000
+amount = 4000
 producer = SWE }  
 add_political_power = -20 }
 }
@@ -72,13 +72,14 @@ division_template = {
 
 focus = {
 id = POV_Call_Everyone
-icon = GFX_focus_SOV_womens_fascist_movement
+icon = GFX_focus_SOV_mobilization_plan
 cost = 0.50
 prerequisite = { focus = POV_Agitaciya_v_tylu_vraga }
 x = 3   
 y = 3
 completion_reward = {
     add_ideas = POV_nazists
+    country_event = POV.1
 }
 }
 
@@ -203,12 +204,12 @@ x = 19
 y = 3
 completion_reward = { add_equipment_to_stockpile = {
     type = artillery_equipment_1
-    amount = 950
+    amount = 600
     producer = ENG
 }
 add_equipment_to_stockpile = {
     type = support_equipment_1
-    amount = 2000
+    amount = 1000
 }
 }
 }

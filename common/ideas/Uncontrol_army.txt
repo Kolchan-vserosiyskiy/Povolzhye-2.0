@@ -34,7 +34,7 @@ ideas = {
 
             picture = pov_nazists
 
-            modifier = { fascism_drift = 0.01  weekly_manpower = 200 }
+            modifier = { fascism_drift = 0.01  weekly_manpower = 200 army_defence_factor = 0.01 }
     }
 }
 }
@@ -51,7 +51,7 @@ ideas = {
 
             picture = generic_victors_of_ww1
 
-            modifier = { army_attack_factor = 0.2 army_defence_factor = 0.2 army_org_regain  = 0.1 supply_consumption_factor = -0.05 }
+            modifier = { army_attack_factor = 0.06 army_defence_factor = 0.06 army_org_regain  = 0.1 supply_consumption_factor = -0.05 }
     }
 }
 }

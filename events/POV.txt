@@ -1,0 +1,136 @@
+add_namespace = POV
+
+country_event = {
+	id = POV.1
+	title = POV.1.t
+	desc = POV.1.d
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = POV.1.a
+		ai_chance = { factor = 35 }
+		trigger = {	}
+		division_template = {
+			name = "Отряд РЖФД"
+			is_locked = yes
+			division_names_group = POV_INF_02
+			priority = 1
+			template_counter = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+			}
+			support = { 
+				engineer = {
+					x = 0
+					y = 0
+				}
+			}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Отряд РЖФД\" division_template = \"Отряд РЖФД\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = POV
+					count = 5
+				}				
+			}
+			add_political_power = -20
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = JAP }  
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 100
+					producer = JAP }
+					add_ideas = POV_nazists  
+					country_event = POV.2
+	}
+	
+	option = {
+		name = POV.1.b
+		ai_chance = { factor = 50 }
+		trigger = { }
+		add_stability = -4
+			add_war_support = 4
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = JAP }  
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 100
+					producer = JAP } 
+					country_event = POV.2 
+	}
+
+	option = {
+		name = POV.1.c
+		ai_chance = { factor = 15}
+		trigger = { }
+		add_political_power = 20
+		add_stability = 0.1
+		country_event = POV.2
+	}
+}
+
+country_event = {
+	id = POV.2
+	title = POV.2.t
+	desc = POV.2.d
+	picture = GFX_report_event_soldiers_marching
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 10 }
+
+	option = {
+		name = POV.2.a
+		ai_chance = { factor = 80 }
+		trigger = { }
+		division_template = {
+			name = "Церковный полк"
+			is_locked = yes
+			division_names_group = POV_INF_02
+			priority = 1
+			template_counter = 1
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+			}
+			support = { 
+				artillery = {
+					x = 0
+					y = 0
+				} 
+			}
+			}
+			capital_scope = {
+				create_unit = {
+				division = "name = \"Церковный полк\" division_template = \"Церковный полк\" start_experience_factor = 0.2 start_equipment_factor = 0.4"
+				owner = POV
+				count = 5
+				}
+			}
+		
+	}
+
+	option = {
+		name = POV.2.b
+		ai_chance = { factor = 20 }
+		trigger = { }
+		add_manpower = 10000
+	}
+}
