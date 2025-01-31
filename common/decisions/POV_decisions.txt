@@ -42,10 +42,10 @@ POVbunt={
 	POV_bunt_Moscow={
 		icon=decision_generic_speech
 		available={
+		has_completed_focus = POV_Intervantion
 		tag=POV 
 		SOV={controls_state = 219}}
-		custom_cost_text=decision_cost_CP_20
-        custom_cost_trigger={command_power > 20 }
+		cost = 40
         
 		fire_only_once=no
 		days_re_enable=180
@@ -60,14 +60,57 @@ POVbunt={
 			infantry={x=1 y=0}
 			infantry={x=1 y=1}}
 			support={artillery={x=0 y=0}
-					  engineer={x=0 y=1}}
-			}
+					  engineer={x=0 y=1}}}
 		219={
 			create_unit={
 				division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14start_equipment_factor=1.0"
 				owner=POV
 				allow_spawning_on_enemy_provs=yes
-				count=4
+				count=5
 			}
 		}
-		}}}
+	}
+}
+		POV_bunt_north={
+			icon=decision_generic_speech
+			available={
+			tag=POV 
+			has_completed_focus = POV_Intervantion
+			SOV={controls_state = 214 controls_state = 213}}
+			cost = 40
+			
+			fire_only_once=no
+			days_re_enable=180
+			complete_effect={
+			SEV = {
+				division_template={
+					name="Повстанцы"
+					regiments={ 
+					infantry={x=0 y=0}
+					infantry={x=0 y=1}
+					infantry={x=0 y=2}
+					infantry={x=0 y=3}
+					infantry={x=1 y=0}
+					infantry={x=1 y=1}}
+					support={artillery={x=0 y=0}
+							  engineer={x=0 y=1}}}
+			
+			214={transfer_state_to= SEV}
+			214 = {
+				create_unit={
+					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14start_equipment_factor=1.0"
+					owner=SEV
+					allow_spawning_on_enemy_provs=yes
+					count=5}}
+			213={transfer_state_to =SEV}
+			213 = {
+					create_unit={
+					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14start_equipment_factor=1.0"
+					owner=SEV
+					allow_spawning_on_enemy_provs=yes
+					count=5}
+				}
+			}
+			}
+		}
+	}

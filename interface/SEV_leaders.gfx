@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+	name = "GFX_Chaykovskiy"
+	texturefile = "gfx/leaders/SEV/Portrait_Chaykovskiy_SEV.dds"
+		}				
+	}

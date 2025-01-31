@@ -1,0 +1,14 @@
+characters = {
+	SEV_Chaykovskiy = {
+		name = SEV_Chaykovskiy
+		portraits = {
+			civilian = {
+				large = GFX_Chaykovskiy
+			}
+		}
+		country_leader = { ideology = conservatism
+						   expire = "1925.4.30"
+						   id = -1	
+		}
+	}
+}

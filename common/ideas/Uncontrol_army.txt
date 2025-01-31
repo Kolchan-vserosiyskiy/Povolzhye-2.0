@@ -12,10 +12,10 @@ ideas = {
 			picture = sov_uncontrol_army
 
 			modifier = {
-				army_attack_factor = -0.1
+				army_attack_factor = -0.4
 				army_defence_factor = -0.3
-				army_speed_factor = -0.7
-				surrender_limit = 3.0
+				army_speed_factor = -0.5
+				surrender_limit = 4.0
 			}
 		}
 	}
@@ -34,7 +34,7 @@ ideas = {
 
             picture = pov_nazists
 
-            modifier = { fascism_drift = 0.01  weekly_manpower = 200 army_defence_factor = 0.01 }
+            modifier = { fascism_drift = 0.01 army_defence_factor = 0.05 }
     }
 }
 }
@@ -51,7 +51,7 @@ ideas = {
 
             picture = generic_victors_of_ww1
 
-            modifier = { army_attack_factor = 0.06 army_defence_factor = 0.06 army_org_regain  = 0.1 supply_consumption_factor = -0.05 }
+            modifier = { army_attack_factor = 0.08 army_defence_factor = 0.10 army_org_regain  = 0.1 supply_consumption_factor = -0.10 }
     }
 }
 }
