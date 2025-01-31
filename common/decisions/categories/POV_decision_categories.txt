@@ -4,7 +4,7 @@
 
 POVnationalization = {
 
-	icon = decision_category_spr_the_seeds_of_revolution.gfx
+	icon = decision_category_spr_the_seeds_of_revolution
 
 	priority = 10
 
@@ -15,4 +15,14 @@ POVnationalization = {
 	allowed = {
 		original_tag = POV
 	}
+}
+
+POVbunt = {
+	icon = decision_category_spr_the_seeds_of_revolution
+
+	priority = 1
+
+	visible = { has_completed_focus = POV_Intervantion }
+
+	allowed = { original_tag = POV }
 }

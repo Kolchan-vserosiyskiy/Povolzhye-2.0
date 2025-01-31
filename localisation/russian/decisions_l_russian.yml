@@ -1,5 +1,7 @@
 ﻿l_russian:
  POVnationalization: "Установление контроля над регионами"
+ POVbunt: "Восстания в тылу врага"
+ POV_bunt_Moscow: "Бунт в Москве"
  POV_nat_centre: "Центральная Россия" 
  POV_nat_north: "Народы севера"
  DECISIONVIEW_TITLE: "События и решения"
