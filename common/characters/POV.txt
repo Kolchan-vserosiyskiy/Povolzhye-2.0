@@ -1,6 +1,6 @@
 characters = {
 POV_Kalinin = {
-name = "Fyodor Kalinin"
+name = POV_Kalinin
 portraits = {
 civilian = {
 large = GFX_Portrait_Kalinin
@@ -13,7 +13,7 @@ id = -1
         }
     }
 POV_Krasnov = {
-    name = "Pyotr Krasnov"
+    name = Krasnov
     portraits = {
         civilian = {
             large = GFX_Portrait_Krasnov

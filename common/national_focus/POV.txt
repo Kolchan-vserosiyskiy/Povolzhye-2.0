@@ -6,7 +6,8 @@ icon=GFX_focus_ARG_air_force
 cost=0.15
 x=8 y=0
 completion_reward={add_political_power=100 add_war_support=0.4 add_manpower=40000 
-                   add_ideas=POV_vosstaliease_pepla}}
+                   add_ideas=POV_vosstaliease_pepla}
+}
 
 focus={
 id=POV_Unpack
@@ -17,7 +18,8 @@ completion_reward={add_equipment_to_stockpile={
 type=infantry_equipment
 amount=4000
 producer=SOV}  
-add_political_power=-20}}
+    }
+}
 
 focus={
 id=POV_Agitaciya_v_tylu_vraga
@@ -35,10 +37,26 @@ division_template={
     regiments={infantry={x=0 y=0}
                infantry={x=0 y=1}
                infantry={x=0 y=2}
-               infantry={ x=0 y=3}}
-               support={}}
+               infantry={x=1 y=0}
+               infantry={x=1 y=1}
+               infantry={x=1 y=2}
+               infantry={x=2 y=0}
+               infantry={x=2 y=1}
+               infantry={x=2 y=3}
+            }
+               support={ artillery={x=0 y=0}
+            }
+        }
+            195 = {
+            delete_unit = {
+                division_template = "Infantry Division"
+                count = 3
+            }
+        }
 
-    capital_scope={create_unit={ division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3}}}}
+    capital_scope={create_unit={ division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3}       
+    }
+}
 
 focus={
 id=POV_Call_Everyone
@@ -109,7 +127,8 @@ completion_reward={division_template={
         support={ engineer={x=0 y=0}}}
     capital_scope={
         create_unit={
-            division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}}}}
+            division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}}
+            add_political_power=-20}}
 
 focus={
 id=POV_Buy_artillery_and_supply
@@ -118,7 +137,9 @@ cost=1.00
 prerequisite={focus=POV_Unpack}
 x=19 y=3
 completion_reward={add_equipment_to_stockpile={type=artillery_equipment_1 amount=600 producer=ENG}
-add_equipment_to_stockpile={type=support_equipment_1 amount=1000}}}
+add_equipment_to_stockpile={type=support_equipment_1 amount=1000}
+    }
+}
 
 focus={
 id=POV_Buy_aircrafts
@@ -126,7 +147,8 @@ icon=GFX_goal_unknown
 cost=1.00
 prerequisite={focus=POV_Buy_soldiers focus=POV_Buy_artillery_and_supply}
 x=18 y=4
-completion_reward={}}
+completion_reward={}
+}
 
 focus={
     id=POV_Unite_Peoples
@@ -146,6 +168,5 @@ focus={
     x=6 y=5
     completion_reward={
         unlock_decision_category_tooltip=POVbunt
+        }
     }
-    }
-}

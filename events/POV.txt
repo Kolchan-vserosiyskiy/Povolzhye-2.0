@@ -32,8 +32,8 @@ country_event = {
 				engineer = {
 					x = 0
 					y = 0
+					}
 				}
-			}
 			}
 			capital_scope = {
 				create_unit = {
@@ -42,6 +42,9 @@ country_event = {
 					count = 5
 				}				
 			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03}
 			add_political_power = -20
 			add_stability = -0.1
 			add_war_support = 0.1

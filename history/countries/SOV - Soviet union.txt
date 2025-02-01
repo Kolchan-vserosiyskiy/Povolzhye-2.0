@@ -131,6 +131,10 @@ recruit_character = SOV_abram_ioffe
 recruit_character = SOV_boris_stechkin
 recruit_character = SOV_arkady_nazarov
 recruit_character = SOV_vladimir_kotelnikov
+declare_war_on = {
+	target = SEV
+	type = annex_everything
+}
 
 # Lokot Autonomy Characters
 recruit_character = SOV_konstantin_voskoboinik

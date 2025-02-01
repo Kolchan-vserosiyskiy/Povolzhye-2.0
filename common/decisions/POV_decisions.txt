@@ -63,7 +63,7 @@ POVbunt={
 					  engineer={x=0 y=1}}}
 		219={
 			create_unit={
-				division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14start_equipment_factor=1.0"
+				division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14 start_equipment_factor=1.0"
 				owner=POV
 				allow_spawning_on_enemy_provs=yes
 				count=5
@@ -79,10 +79,10 @@ POVbunt={
 			SOV={controls_state = 214 controls_state = 213}}
 			cost = 40
 			
-			fire_only_once=no
+			fire_only_once= yes
 			days_re_enable=180
 			complete_effect={
-			SEV = {
+			SEV = {							
 				division_template={
 					name="Повстанцы"
 					regiments={ 
@@ -98,19 +98,26 @@ POVbunt={
 			214={transfer_state_to= SEV}
 			214 = {
 				create_unit={
-					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14start_equipment_factor=1.0"
+					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14 start_equipment_factor=1.0"
 					owner=SEV
 					allow_spawning_on_enemy_provs=yes
 					count=5}}
 			213={transfer_state_to =SEV}
 			213 = {
 					create_unit={
-					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14start_equipment_factor=1.0"
+					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14 start_equipment_factor=1.0"
 					owner=SEV
 					allow_spawning_on_enemy_provs=yes
 					count=5}
 				}
 			}
 			}
+		}
+		POV_north_change = {
+			icon = decision_generic_speech
+			available = { tag = POV has_completed_focus = POV_Intervantion }
+			fire_only_once = no
+			days_re_enable = 1
+			complete_effect = { SEV = { change_tag_from = POV }	}
 		}
 	}

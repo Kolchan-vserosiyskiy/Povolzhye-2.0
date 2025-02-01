@@ -40,7 +40,3 @@ declare_war_on = {
 
 set_stability = 0.21
 set_war_support = 0.40
-declare_war_on = {
-	target = SOV
-	type = annex_everything
-}

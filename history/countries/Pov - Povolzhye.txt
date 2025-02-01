@@ -18,6 +18,7 @@ gw_artillery = 1
 }
 
 recruit_character = POV_Kalinin
+recruit_character = POV_Krasnov
 
 puppet = SEV
 
