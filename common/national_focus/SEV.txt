@@ -1,0 +1,4 @@
+focus_tree = {
+	id = SEV
+	country = {factor=0 modifier={add=10 tag=POV}}default=no
+}

@@ -28,7 +28,8 @@ POVnationalization = {
 		controls_state = 833
 		controls_state = 400
 		controls_state = 255
-		controls_state = 351}
+		controls_state = 351
+		}
 		cost = 100
 		fire_only_once = yes
 		complete_effect = {
@@ -36,7 +37,10 @@ POVnationalization = {
 		833={add_core_of=POV}
 		400={add_core_of=POV}
 		255={add_core_of=POV}
-		351={add_core_of=POV}}}}
+		351={add_core_of=POV}
+		}
+	}
+}
 
 POVbunt={
 	POV_bunt_Moscow={
@@ -71,6 +75,7 @@ POVbunt={
 		}
 	}
 }
+
 		POV_bunt_north={
 			icon=decision_generic_speech
 			available={

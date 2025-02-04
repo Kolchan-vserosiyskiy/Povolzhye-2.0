@@ -47,15 +47,16 @@ division_template={
                support={ artillery={x=0 y=0}
             }
         }
-            195 = {
+            SOV = {
             delete_unit = {
                 division_template = "Infantry Division"
-                count = 3
+                state = 195
             }
         }
 
     capital_scope={create_unit={ division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3}       
     }
+}
 }
 
 focus={
@@ -158,15 +159,22 @@ focus={
     prerequisite={focus=POV_Call_Everyone}
     x=6 y=3
     completion_reward={unlock_decision_category_tooltip=POVnationalization
-                      capital_scope={create_unit={division = Krestyane owner = POV count = 5}}}}
+                      capital_scope={create_unit = {
+                            division = Krestyane 
+                            owner = POV 
+                            count = 5 }
+                }
+            }
+        }
 
 focus={
     id=POV_Intervantion
     icon=GFX_focus_generic_workers
     cost=5
-    prerequisite={focus=POV_Unite_Peoples}
+    prerequisite={ focus=POV_Unite_Peoples }
     x=6 y=5
     completion_reward={
         unlock_decision_category_tooltip=POVbunt
         }
     }
+}
