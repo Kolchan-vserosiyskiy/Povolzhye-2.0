@@ -10,7 +10,7 @@ steel=14 # was: 20
 }
 
 history={
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 2
 industrial_complex = 1

@@ -7,7 +7,7 @@ manpower = 1391819
 state_category = town
 
 history={
-owner = POV
+owner = SOV
 victory_points = {
 11225 3 
 }

@@ -6,7 +6,7 @@ steel=20.000
 }
 
 history={
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 2
 			

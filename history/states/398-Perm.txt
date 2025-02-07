@@ -9,7 +9,7 @@ aluminium = 6 # was: 10
 }
 
 history = {
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 3 #was: 6
 arms_factory = 1

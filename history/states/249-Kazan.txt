@@ -10,7 +10,7 @@ steel=25 # was: 40
 }
 
 history={
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 3 #was: 6
 arms_factory = 2
@@ -18,7 +18,7 @@ arms_factory = 2
 victory_points = {
 6338 10
 }
-add_core_of = POV
+add_core_of = SOV
 add_core_of = TAT
 1939.1.1 = {
 buildings = {

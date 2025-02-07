@@ -7,7 +7,7 @@ manpower = 2552075
 state_category = city
 
 history = {
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 3 #was: 5
 industrial_complex = 1

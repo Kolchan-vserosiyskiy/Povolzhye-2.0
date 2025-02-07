@@ -9,7 +9,7 @@ chromium = 18 # was: 24
 }
 
 history = {
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 2
 }

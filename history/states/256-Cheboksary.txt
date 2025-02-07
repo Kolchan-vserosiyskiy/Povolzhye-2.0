@@ -10,7 +10,7 @@ history = {
 victory_points = {
 9259 1 
 }
-owner = POV
+owner = SOV
 buildings = {
 infrastructure = 2
 }
