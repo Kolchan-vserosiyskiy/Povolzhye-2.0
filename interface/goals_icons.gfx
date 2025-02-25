@@ -1,0 +1,6 @@
+SpriteTypes = {
+	spriteType = {
+		name = focus_POV_reserv
+		textureFile = "gfx/interface/goals/Focus_POV_reserv.dds"
+	}
+}

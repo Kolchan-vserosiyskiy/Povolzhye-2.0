@@ -1,4 +1,0 @@
-l_russian:
-decision_cost_CP_20: "£command_power  §Y15§!"
- decision_cost_CP_20_blocked: "£command_power  §R15§!"
- decision_cost_CP_20_tooltip: "Это стоит £command_power  §Y15§!"

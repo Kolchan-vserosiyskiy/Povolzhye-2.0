@@ -1,31 +1,36 @@
-focus_tree={id=POV country={factor=0 modifier={add=10 tag=POV}}default=no
+focus_tree={
+    id=POV country = {
+        factor=0
+         modifier = { add=10 tag=POV }
+        }
+    default=no
 
 focus={
-id=POV_Krestyanskiy_bunt
-icon=GFX_focus_ARG_air_force
-cost=0.15
-x=8 y=0
-completion_reward={add_political_power=100 add_war_support=0.4 add_manpower=40000 
-                   add_ideas=POV_vosstaliease_pepla}
+id = POV_Krestyanskiy_bunt
+icon = GFX_focus_ARG_air_force
+cost = 0.15
+x = 8 y = 0
+completion_reward={ add_political_power=100 add_war_support=0.4 add_manpower=40000 }
 }
 
-focus={
+focus = {
 id=POV_Unpack
+icon = focus_POV_reserv
 cost=1.00
 prerequisite={focus=POV_Get_gold}
 x=18 y=2
-completion_reward={add_equipment_to_stockpile={
+completion_reward={ add_equipment_to_stockpile = {
 type=infantry_equipment
 amount=4000
-producer=SOV}  
+producer=SOV }  
     }
 }
 
-focus={
+focus= {
 id=POV_Agitaciya_v_tylu_vraga
 icon=GFX_focus_FIN_parmis_devils
 cost=0.15
-prerequisite={focus=POV_Krestyanskiy_bunt}
+prerequisite={ focus=POV_Krestyanskiy_bunt }
 x=3 y=1
 completion_reward={ 
 division_template={
@@ -54,9 +59,12 @@ division_template={
             }
         }
 
-    capital_scope={create_unit={ division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3}       
+    capital_scope={
+        create_unit={ 
+            division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3 }       
+        }
+    
     }
-}
 }
 
 focus={
@@ -82,6 +90,10 @@ id=POV_Get_gold
 icon=GFX_focus_usa_reestablish_the_gold_standard
 cost=0.40
 prerequisite={focus=POV_Krestyanskiy_bunt}
+    available = {
+        249 = { is_controlled_by = POV
+    }
+    }
 x=18 y=1
 completion_reward={add_political_power=100}}
 
@@ -105,15 +117,18 @@ completion_reward={add_political_power=-20
                             651 = {add_building_construction={
                                 type=arms_factory
                                 level=1
-                                instant_build=yes}}}}
+                                instant_build=yes}
+                            }
+                        }
+                    }
 focus = {
 id=POV_Buy_soldiers
 icon=GFX_goal_unknown
 cost=2.00
-prerequisite={focus=POV_Unpack}
-x=17 y=3
-completion_reward={division_template={
-                  name=Наёмники
+prerequisite={focus=POV_Call_Everyone}
+x=3 y=5
+completion_reward={ division_template = {
+                  name = Наёмники
                   is_locked=yes
                   regiments={ 
                   infantry={x=0 y=0}
@@ -124,30 +139,24 @@ completion_reward={division_template={
                   infantry={x=1 y=1}
                   infantry={x=1 y=2}
                   infantry={x=1 y=3}
-                  artillery={x=3 y=0}}
-        support={ engineer={x=0 y=0}}}
-    capital_scope={
-        create_unit={
-            division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}}
-            add_political_power=-20}}
-
-focus={
-id=POV_Buy_artillery_and_supply
-icon=GFX_goal_unknown
-cost=1.00
-prerequisite={focus=POV_Unpack}
-x=19 y=3
-completion_reward={add_equipment_to_stockpile={type=artillery_equipment_1 amount=600 producer=ENG}
-add_equipment_to_stockpile={type=support_equipment_1 amount=1000}
+                  artillery={x=3 y=0}
+                }
+        support = { engineer={x=0 y=0}
+        }
     }
-}
+    capital_scope = {
+        create_unit = {
+            division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}
+        }
+            add_political_power=-20}
+    }
 
 focus={
-id=POV_Buy_aircrafts
+id=POV_Rinok
 icon=GFX_goal_unknown
 cost=1.00
-prerequisite={focus=POV_Buy_soldiers focus=POV_Buy_artillery_and_supply}
-x=18 y=4
+prerequisite={ focus=POV_Unpack}
+x=17 y=3
 completion_reward={}
 }
 
@@ -156,7 +165,6 @@ focus={
     icon=GFX_focus_ETH_freedom_at_gunpoint
     cost=7.15
     prerequisite={focus=POV_Krestyanskiy_bunt}
-    prerequisite={focus=POV_Call_Everyone}
     x=6 y=3
     completion_reward={unlock_decision_category_tooltip=POVnationalization
                       capital_scope={create_unit = {
@@ -176,5 +184,14 @@ focus={
     completion_reward={
         unlock_decision_category_tooltip=POVbunt
         }
+    }
+
+    focus = {
+        id = create_goverment
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        x = x
+        y = x
+        completion_reward = { }
     }
 }

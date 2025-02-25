@@ -88,3 +88,13 @@ ideas = {
         }
     }
 }
+
+ideas = {
+    country = {
+        POV_hungry_peoples = {
+            name = POV_hungry_peoples
+            removal_cost = -1
+            allowed = {}
+        }
+    }
+}
