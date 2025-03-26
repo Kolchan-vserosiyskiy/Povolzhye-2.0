@@ -1,4 +1,9 @@
 ﻿l_russian:
+ POVrinok: "Международный рынок"
+ POV_infantry: "Купить пехотное снаряжение"
+ POV_artillery: "Купить артиллерию"
+ POV_supply: "Купить дополнительное оснащение"
+ POV_motorized: "Купить грузовики"
  POV_north_change: "Переместиться на север"
  POVnationalization: "Установление контроля над регионами"
  POVbunt: "Восстания в тылу врага"

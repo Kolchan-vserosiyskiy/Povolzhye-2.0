@@ -54,7 +54,7 @@ division_template={
         }
             SOV = {
             delete_unit = {
-                division_template = "Infantry Division"
+                division_template = "Strelkovaya Diviziya"
                 state = 195
             }
         }
@@ -152,12 +152,12 @@ completion_reward={ division_template = {
     }
 
 focus={
-id=POV_Rinok
-icon=GFX_goal_unknown
-cost=1.00
-prerequisite={ focus=POV_Unpack}
-x=17 y=3
-completion_reward={}
+    id=POV_Rinok
+    icon=GFX_goal_unknown
+    cost=1.00
+        prerequisite={ focus=POV_Unpack}
+        x=17 y=3
+            completion_reward={ unlock_decision_category_tooltip = POVrinok }
 }
 
 focus={
@@ -194,4 +194,5 @@ focus={
         y = x
         completion_reward = { }
     }
+
 }

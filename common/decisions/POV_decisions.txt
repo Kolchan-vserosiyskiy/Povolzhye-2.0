@@ -120,9 +120,80 @@ POVbunt={
 		}
 		POV_north_change = {
 			icon = decision_generic_speech
-			available = { tag = POV has_completed_focus = POV_Intervantion }
+			available = { tag = POV has_completed_focus = POV_Intervantion SEV = {
+				controls_state = 214
+			 }
+			} 
 			fire_only_once = no
 			days_re_enable = 1
 			complete_effect = { SEV = { change_tag_from = POV }	}
 		}
 	}
+	
+	POVrinok = {
+		POV_infantry = {
+			icon = decision_generic_speech
+			available = { tag = POV has_completed_focus = POV_Rinok } 
+			fire_only_once = no
+			days_re_enable = 20
+			cost = 10
+			complete_effect = { add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}	}
+		}
+
+		POV_artilery = {
+			icon = decision_generic_speech
+			available = { tag = POV has_completed_focus = POV_Rinok } 
+			fire_only_once = no
+			days_re_enable = 20
+			cost = 30
+			complete_effect = { 
+				add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+			}	
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 500
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 500
+			}
+				}
+		}
+
+		POV_supply = {
+			icon = decision_generic_speech
+			available = { tag = POV has_completed_focus = POV_Rinok } 
+			fire_only_once = no
+			days_re_enable = 20
+			cost = 20
+			complete_effect = { 
+				add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				}
+			}
+		}
+
+		POV_trucks = {
+			visible = {
+				tag = POV		
+				}
+			icon = decision_generic_speech
+			available = { tag = POV has_completed_focus = POV_Rinok } 
+			fire_only_once = no
+			days_re_enable = 20
+			cost = 15
+			complete_effect = { 
+					add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				}
+		}
+	}
+}

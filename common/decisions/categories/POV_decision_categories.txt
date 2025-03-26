@@ -6,13 +6,20 @@ POVnationalization = {
 
 	icon = decision_category_spr_the_seeds_of_revolution
 	priority = 10
-	visible = {has_completed_focus = POV_Unite_Peoples }
-	allowed = {	original_tag = POV }
+	visible = { has_completed_focus = POV_Unite_Peoples }
+	allowed = { tag = POV }
 }
 
 POVbunt = {
 	icon = decision_category_spr_the_seeds_of_revolution
 	priority = 1
 	visible = { has_completed_focus = POV_Intervantion }
-	allowed = { original_tag = POV }
+	allowed = { tag = POV }
+}
+
+POVrinok = {
+	icon = decision_category_spr_the_seeds_of_revolution
+	priority = 1
+	visible = { has_completed_focus = POV_Rinok	}
+	allowed = {	tag = POV }
 }
