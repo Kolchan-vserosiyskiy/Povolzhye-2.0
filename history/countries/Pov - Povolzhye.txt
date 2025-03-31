@@ -17,6 +17,7 @@ interwar_artillery = 1
 gw_artillery = 1
 }
 
+recruit_character = POV_Lyupov
 recruit_character = POV_Kalinin
 recruit_character = POV_Krasnov
 add_ideas = POV_vosstaliease_pepla

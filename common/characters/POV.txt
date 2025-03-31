@@ -13,7 +13,7 @@ id = -1
         }
     }
     POV_Krasnov = {
-    name = Krasnov
+    name = POV_Krasnov
     portraits = {
         civilian = {
             large = GFX_Portrait_Krasnov
@@ -24,5 +24,22 @@ id = -1
         expire = "1947.1.16"
         id = -1
         }
+    }
+
+    POV_Lyupov = {
+        name = POV_Lyupov
+        portraits = {
+            civilian = {
+                large = GFX_Portrait_POV_Lyupov
+            }
+        }
+    corps_commander = {
+        skill = 1
+        attack_skill = 2
+        defense_skill = 2
+        planning_skill = 1
+        logistics_skill = 3
+        legacy_id = 1
+    }
     }
 }  

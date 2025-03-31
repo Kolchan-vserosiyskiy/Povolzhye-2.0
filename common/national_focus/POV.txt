@@ -27,45 +27,48 @@ producer=SOV }
 }
 
 focus= {
-id=POV_Agitaciya_v_tylu_vraga
-icon=GFX_focus_FIN_parmis_devils
-cost=0.15
-prerequisite={ focus=POV_Krestyanskiy_bunt }
-x=3 y=1
-completion_reward={ 
-division_template={
-    name="Desertiry"
-    is_locked=yes
-    division_names_group=POV_INF_02
-    priority=1
-    template_counter=1
-    regiments={infantry={x=0 y=0}
-               infantry={x=0 y=1}
-               infantry={x=0 y=2}
-               infantry={x=1 y=0}
-               infantry={x=1 y=1}
-               infantry={x=1 y=2}
-               infantry={x=2 y=0}
-               infantry={x=2 y=1}
-               infantry={x=2 y=3}
-            }
-               support={ artillery={x=0 y=0}
-            }
+    id=POV_Agitaciya_v_tylu_vraga
+    icon=GFX_focus_FIN_parmis_devils
+    cost=0.15
+    prerequisite={ focus=POV_Krestyanskiy_bunt }
+    x=3 y=1
+    completion_reward={ 
+        POV = {
+            country_event = POV.3
         }
-            SOV = {
-            delete_unit = {
-                division_template = "Strelkovaya Diviziya"
-                state = 195
+    division_template={
+        name="Desertiry"
+        is_locked=yes
+        division_names_group=POV_INF_02
+        priority=1
+        template_counter=1
+        regiments={infantry={x=0 y=0}
+                   infantry={x=0 y=1}
+                   infantry={x=0 y=2}
+                   infantry={x=1 y=0}
+                   infantry={x=1 y=1}
+                   infantry={x=1 y=2}
+                   infantry={x=2 y=0}
+                   infantry={x=2 y=1}
+                   infantry={x=2 y=3}
+                }
+                   support={ artillery={x=0 y=0}
+                }
             }
-        }
-
-    capital_scope={
-        create_unit={ 
-            division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3 }       
-        }
+                SOV = {
+                delete_unit = {
+                    division_template = "Strelkovaya Diviziya"
+                    state = 195
+                }
+            }
     
+        capital_scope={
+            create_unit={ 
+                division="name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"owner=POV count=3 }       
+            }
+        
+        }
     }
-}
 
 focus={
 id=POV_Call_Everyone

@@ -2,7 +2,7 @@ version="1"
 tags={
 	"Alternative History"
 }
-name="Povolzhye"
+name="The Second Rise"
 picture="Thumbnail.png"
 replace_path="gfx/loadingscreens"
 supported_version="1.16.*"
