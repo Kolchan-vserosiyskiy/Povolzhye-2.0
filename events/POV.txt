@@ -154,9 +154,9 @@ country_event = {
 
     option = { #принять
         name = POV.3.a
-		trigger = { tag = POV }
         ai_chance = { factor = 100 }
-
+	
+		hidden_effect = {
         SOV = {
             set_nationality = {
                 target_country = POV
@@ -167,10 +167,20 @@ country_event = {
 				target_country = POV
 				character = SOV_andrey_vlasov
 			}
-		}		
-	}
+		}
+	}	
+	custom_effect_tooltip = Desertiry_generals_1
+}
 
 	option = {
-		
+		name = POV.3.b
+		ai_chance = { factor = 0 }
+
+		hidden_effect = {
+			SOV_andrey_vlasov = { retire = yes }
+			SOV_ivan_chernyakhovsky = { retire = yes }
+		}
+		custom_effect_tooltip = Desertiry_generals_2
+
 	}
 }
