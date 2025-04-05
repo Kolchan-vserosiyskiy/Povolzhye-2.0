@@ -2946,19 +2946,17 @@ country_event = {
 				add_ideas = POV_vosstaliease_pepla
 				complete_national_focus = POV_Krestyanskiy_bunt
 			}
+			news_event = news.1000
 		}
+		
 	option = {
 		name = soviet.77.b
 		ai_chance = { factor = 100 }
 		SOV = {
 			249 = { transfer_state_to = POV }
-			250 = { transfer_state_to = POV }
 			251 = { transfer_state_to = POV }
 			256 = { transfer_state_to = POV }
-			398 = { transfer_state_to = POV }
 			399 = { transfer_state_to = POV }
-			651 = { transfer_state_to = POV }
-			652 = { transfer_state_to = POV }
 	}
 	SOV = {
 	add_ideas = {		
@@ -2977,5 +2975,6 @@ country_event = {
 			add_ideas = POV_vosstaliease_pepla
 			complete_national_focus = POV_Krestyanskiy_bunt
 		}
+		news_event = news.1000
 	}
 }

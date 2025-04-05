@@ -1,0 +1,14 @@
+state = {
+	id=1017
+	name="STATE_1017"
+	provinces={
+		123 4314 4802 7824 11111 11195 12175 12187 12587 
+	}
+	manpower= 314578
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	history = {
+		owner = SOV
+	}
+	state_category = rural
+}
