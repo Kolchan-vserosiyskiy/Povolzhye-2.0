@@ -1,4 +1,5 @@
 add_namespace = POV
+add_namespace = Election
 
 
 country_event = {
@@ -182,5 +183,43 @@ country_event = {
 		}
 		custom_effect_tooltip = Desertiry_generals_2
 
+	}
+}
+
+country_event = {
+	id = POV.4 #Выборы нового правительства
+	title = POV.4.t
+	desc = POV.4.d
+	picture = GFX_report_event_gathering_protest
+
+	option = {
+		name = POV.4.a #Социалисты
+		trigger = {
+			socialism > 0.4
+		}
+		set_politics = {
+			ruling_party = socialism
+		}
+	}
+
+
+	option = {
+		name = POV.4.b #Фашисты
+		trigger = {
+			fascism > 0.4
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+	}
+
+	option = {
+		name = POV.4.c #Демократы
+		trigger = {
+			democratic > 0.4
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
 	}
 }

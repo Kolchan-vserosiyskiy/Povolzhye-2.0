@@ -15,4 +15,8 @@ spriteType = {
 	texturefile = "gfx/leaders/POV/Portrait_POV_Lyupov.dds"
 }
 
+spriteType = {
+	name = "GFX_Portrait_Chernov"
+	textureFile = "gfx/leaders/POV/Portrait_POV_Chernov.dds"
+}
 }

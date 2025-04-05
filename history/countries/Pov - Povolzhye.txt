@@ -20,6 +20,7 @@ gw_artillery = 1
 recruit_character = POV_Lyupov
 recruit_character = POV_Kalinin
 recruit_character = POV_Krasnov
+recruit_character = POV_Chernov
 add_ideas = POV_vosstaliease_pepla
 
 set_politics = {
@@ -31,10 +32,10 @@ elections_allowed = no
 army_experience = 25
 
 set_popularities = {
-neutrality = 11
+neutrality = 8
 fascism = 1
-democratic = 87
-communism = 1
+democratic = 70
+socialism = 21
 }
 
 declare_war_on = {

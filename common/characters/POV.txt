@@ -1,4 +1,5 @@
 characters = {
+    #COUNTRY LEADERS
 POV_Kalinin = {
 name = POV_Kalinin
 portraits = {
@@ -7,11 +8,12 @@ large = GFX_Portrait_Kalinin
         }
     }  
 country_leader = {
-ideology = socialism
+ideology = liberalism
 expire = "1941.5.25"
 id = -1
         }
     }
+
     POV_Krasnov = {
     name = POV_Krasnov
     portraits = {
@@ -26,6 +28,21 @@ id = -1
         }
     }
 
+POV_Chernov = {
+    name = POV_Chernov
+    portraits = {
+        civilian = {
+            large = GFX_Portrait_Chernov
+        }
+    }
+    country_leader = {
+        ideology = socialism
+        expire = "1951.4.15"
+        id = -1
+    }
+}
+
+#CORPS COMMANDERS
     POV_Lyupov = {
         name = POV_Lyupov
         portraits = {

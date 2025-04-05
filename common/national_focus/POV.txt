@@ -5,24 +5,28 @@ focus_tree={
         }
     default=no
 
-focus={
+focus = {
 id = POV_Krestyanskiy_bunt
 icon = GFX_focus_ARG_air_force
 cost = 0.15
 x = 8 y = 0
-completion_reward={ add_political_power=100 add_war_support=0.4 add_manpower=40000 }
+completion_reward={ 
+    add_political_power=100 
+    add_war_support = 0.4 
+    add_ideas = POV_hungry_peoples
+    add_ideas = Pov_hyperinflation }
 }
 
 focus = {
-id=POV_Unpack
+id = POV_Unpack
 icon = focus_POV_reserv
-cost=1.00
-prerequisite={focus=POV_Get_gold}
+cost = 1.00
+prerequisite = { focus=POV_Get_gold }
 x=18 y=2
 completion_reward={ add_equipment_to_stockpile = {
 type=infantry_equipment
-amount=4000
-producer=SOV }  
+amount = 4000
+producer = SOV }  
     }
 }
 
@@ -83,47 +87,50 @@ id=POV_Get_enevy_aviation
 icon=GFX_focus_generic_cas_aircraft
 cost=0.50
 prerequisite={focus=POV_Krestyanskiy_bunt}
-x=10
+x=12
 y=1 
 completion_reward={add_equipment_to_stockpile={type=small_plane_cas_airframe amount=100 variant_name="Plane From USSR"}}}
 
 
 focus={
 id=POV_Get_gold
-icon=GFX_focus_usa_reestablish_the_gold_standard
-cost=0.40
-prerequisite={focus=POV_Krestyanskiy_bunt}
+icon = GFX_focus_usa_reestablish_the_gold_standard
+cost = 0.40
+prerequisite = { focus = POV_Krestyanskiy_bunt }
     available = {
         249 = { is_controlled_by = POV
-    }
+        }
     }
 x=18 y=1
 completion_reward={add_political_power=100}}
 
-focus={
-id=POV_Invest_gold_in_manufactures
-icon=GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
-cost=3.00
-prerequisite={focus=POV_Get_gold}
-x=14 y=2
-completion_reward={add_political_power=-20
-                   256={add_building_construction={
-                        type=arms_factory
-                        level=1
-                        instant_build=yes}}
+focus = {
+id  =POV_Free_Trade
+icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+cost = 3.00
+prerequisite = { }
+x = 30 y = 0
+completion_reward = {
+    random_list = {
+        50 = {
+    swap_ideas = {
+        remove_idea = POV_hyperinflation
+        add_idea = POV_hyperinflation_1
+                } 
+            add_stability = 0.1  
+            }
+            50 = {
+                swap_ideas = {
+                    remove_idea = POV_hyperinflation
+                    add_idea = POV_hyperinflation_2
+                } 
+                add_stability = 0.1  
+            }
+        }
+    }
+}
 
-                        251={add_building_construction={
-                            type=arms_factory
-                             level=1
-                             instant_build=yes}}
 
-                            651 = {add_building_construction={
-                                type=arms_factory
-                                level=1
-                                instant_build=yes}
-                            }
-                        }
-                    }
 focus = {
 id=POV_Buy_soldiers
 icon=GFX_goal_unknown
@@ -131,7 +138,7 @@ cost=2.00
 prerequisite={focus=POV_Call_Everyone}
 x=3 y=5
 completion_reward={ division_template = {
-                  name = Наёмники
+                  name = "Наёмники"
                   is_locked=yes
                   regiments={ 
                   infantry={x=0 y=0}
@@ -193,9 +200,12 @@ focus={
         id = create_goverment
         icon = GFX_surrender_tiny_flag
         cost = 5
-        x = x
-        y = x
-        completion_reward = { }
+        prerequisite = { focus = POV_Buy_soldiers }
+        prerequisite = { focus = POV_Intervantion }
+        x = 5
+        y = 6
+        completion_reward = { country_event = POV.4 }
     }
+
 
 }
