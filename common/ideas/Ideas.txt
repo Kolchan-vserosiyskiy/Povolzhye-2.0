@@ -85,8 +85,7 @@ ideas = {
             name = POV_vosstaliease_pepla
             removal_cost = -1
             allowed = {}
-            picture = generic_victors_of_ww1
-
+            picture = SWI_spirit_of_helvetia_aggressive_war
             modifier = { army_attack_factor = 0.08 army_defence_factor = 0.10 army_org_regain  = 0.1 supply_consumption_factor = -0.10 }
         }
     }
@@ -98,7 +97,8 @@ ideas = {
             name = POV_hungry_peoples
             removal_cost = -1
             allowed = { tag = POV }
-            modifier = {
+            picture = RAJ_state_of_famine_country
+                modifier = {
                 monthly_population = -0.05
                 army_org_factor = -0.05
                 army_org_regain = -0.05
@@ -119,6 +119,7 @@ ideas = {
         POV_hyperinflation = { #Standart
         removal_cost = -1
         allowed = { tag = POV }
+        picture = chi_hyper_inflation5
         on_add = {
             add_stability = -0.1
             add_war_support = -0.1
