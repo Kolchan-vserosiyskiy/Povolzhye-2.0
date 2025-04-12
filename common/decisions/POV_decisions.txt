@@ -114,8 +114,8 @@ POVbunt={
 					owner=SEV
 					allow_spawning_on_enemy_provs=yes
 					count=5}
+					}
 				}
-			}
 			}
 		}
 		POV_north_change = {
@@ -196,4 +196,47 @@ POVbunt={
 				}
 		}
 	}
+}
+
+POVcrisis = {
+	POV_hugry = {
+		visible = { tag = POV }
+		icon = x
+		days_remove = 90
+		fire_only_once = no
+		complete_effect = {
+			if = {
+				limit ={
+					POV = {
+					has_idea = POV_hungry_peoples2
+					}
+				}
+				swap_ideas = {
+					remove_idea = POV_hungry_peoples2
+					add_idea = POV_hungry_peoples
+				}
+			}
+			else_if = {
+				limit = {
+					POV = {
+					has_idea = POV_hungry_peoples
+					}
+				}
+				swap_ideas = {
+					remove_idea = POV_hungry_peoples
+					add_idea = POV_hungry_peoples1
+				}
+			}
+			else_if = {
+				limit = {
+					POV = {
+					has_idea = POV_hungry_peoples1
+					}
+				}
+				POV = {
+					activate_decision = POV_hugry
+				}
+			}
+		}
+    }
 }

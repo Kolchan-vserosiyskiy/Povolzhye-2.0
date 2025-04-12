@@ -13,7 +13,7 @@ x = 8 y = 0
 completion_reward={ 
     add_political_power=100 
     add_war_support = 0.4 
-    add_ideas = POV_hungry_peoples
+    add_ideas = POV_hungry_peoples1
     add_ideas = Pov_hyperinflation }
 }
 
@@ -104,31 +104,7 @@ prerequisite = { focus = POV_Krestyanskiy_bunt }
 x=18 y=1
 completion_reward={add_political_power=100}}
 
-focus = {
-id  =POV_Free_Trade
-icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
-cost = 3.00
-prerequisite = { }
-x = 30 y = 0
-completion_reward = {
-    random_list = {
-        50 = {
-    swap_ideas = {
-        remove_idea = POV_hyperinflation
-        add_idea = POV_hyperinflation_1
-                } 
-            add_stability = 0.1  
-            }
-            50 = {
-                swap_ideas = {
-                    remove_idea = POV_hyperinflation
-                    add_idea = POV_hyperinflation_2
-                } 
-                add_stability = 0.1  
-            }
-        }
-    }
-}
+
 
 
 focus = {
@@ -149,10 +125,10 @@ completion_reward={ division_template = {
                   infantry={x=1 y=1}
                   infantry={x=1 y=2}
                   infantry={x=1 y=3}
-                  artillery={x=3 y=0}
                 }
         support = { engineer={x=0 y=0}
         }
+        
     }
     capital_scope = {
         create_unit = {
@@ -207,5 +183,118 @@ focus={
         completion_reward = { country_event = POV.4 }
     }
 
+    focus = {
+        id = POV_Socialism_Goverment
+        icon = focus_POV_Socialism_Goverment
+        cost = 1
+        prerequisite = { focus = create_goverment }
+        mutually_exclusive = {
+            focus = POV_Fascism_Goverment
+            focus = POV_Democratic_Goverment
+        }
+        x = -10
+        y = 8
+        completion_reward = { add_popularity = {
+            ideology = socialism
+            popularity = 0.1
+            }
+        }
+    }
 
+    focus = {
+        id = POV_Fascism_Goverment
+        icon = GFX_goal_support_fascism
+        cost = 1
+        prerequisite = { focus = create_goverment }
+        mutually_exclusive = {
+            focus = POV_Socialism_Goverment
+            focus = POV_Democratic_Goverment
+        }
+        x = 20
+        y = 8
+        completion_reward = { add_popularity = {
+            ideology = fascism
+            popularity = 0.1
+            }
+        }
+    }
+
+
+    #DEMCRATIC TREE
+    focus = {
+        id = POV_Democratic_Goverment
+        icon = GFX_goal_support_democracy
+        cost = 1
+        prerequisite = { focus = create_goverment }
+        mutually_exclusive = {
+            focus = POV_Fascism_Goverment
+            focus = POV_Socialism_Goverment
+        }
+        x = 5
+        y = 8
+        completion_reward = { add_popularity = {
+            ideology = democratic
+            popularity = 0.1
+            }
+        }
+    }
+
+    focus = {
+        id = POV_Free_Trade
+        icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+        cost = 3.00
+        prerequisite = { focus = POV_Democratic_Goverment }
+        x = 2 y = 10
+        completion_reward = {           
+            swap_ideas = {
+                remove_idea = POV_hyperinflation
+                add_idea = POV_hyperinflation_1
+                        } 
+                    add_stability = -0.05  
+                swap_ideas = {
+                    remove_idea = POV_hungry_peoples1
+                    add_idea = POV_hungry_peoples
+                }
+                }
+    }
+
+    focus = {
+        id = POV_Chuvash_industry
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        prerequisite = { focus = POV_Free_Trade }
+        x = 0
+        y = 12
+        completion_reward = { }
+    }
+
+    focus = { #Зов о помощи
+        id = POV_Call_Foreign
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        prerequisite = { focus = POV_Democratic_Goverment }
+        x = 14
+        y = 10
+        completion_reward = { 
+            random_list = {
+                33 = {            
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 2000
+                }
+            }
+            33 = {
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 2000
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 1000
+                }
+            }
+            33 = { }
+            }
+        }
+    }
 }

@@ -33,10 +33,6 @@ democratic = 10
 communism = 0
 }
 
-declare_war_on = {
-	target = SOV
-	type = annex_everything
-}
 
 set_stability = 0.21
-set_war_support = 0.40
+set_war_support = 0.40 

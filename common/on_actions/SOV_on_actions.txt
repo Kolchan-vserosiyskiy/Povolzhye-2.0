@@ -6,4 +6,11 @@ on_actions = {
             }
         }
     }
+    on_startup = {
+        effect = {
+            POV = {
+                activate_decision = POV_hugry
+            }
+        }
+    }
 }

@@ -23,3 +23,10 @@ POVrinok = {
 	visible = { has_completed_focus = POV_Rinok	}
 	allowed = {	tag = POV }
 }
+
+POVcrisis = {
+	icon = decision_category_spr_the_seeds_of_revolution
+	priority = 1
+	visible = { has_completed_focus = POV_Krestyanskiy_bunt	}
+	allowed = {	tag = POV }
+}
