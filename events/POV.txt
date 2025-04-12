@@ -48,7 +48,7 @@ country_event = {
 				ideology = fascism
 				popularity = 0.03}
 			add_political_power = -20
-			add_stability = -0.1
+			add_stability = -0.03
 			add_war_support = 0.1
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -56,7 +56,7 @@ country_event = {
 				producer = JAP }  
 				add_equipment_to_stockpile = {
 					type = artillery_equipment
-					amount = 100
+					amount = 500
 					producer = JAP }
 					add_ideas = POV_nazists  
 					country_event = POV.2
@@ -114,6 +114,8 @@ country_event = {
 			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
 			}
 			support = { 
 				artillery = {
