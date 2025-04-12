@@ -1,4 +1,4 @@
-state = {
+state={
 	id=400
 	name="STATE_400"
 	resources={
@@ -10,7 +10,7 @@ state = {
 	history = {
 		owner = SOV
 	}
-	manpower=1684005
+	manpower=2115475
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000
