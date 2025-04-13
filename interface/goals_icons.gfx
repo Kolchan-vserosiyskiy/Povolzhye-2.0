@@ -8,6 +8,11 @@ SpriteTypes = {
 		name = focus_POV_Socialism_Goverment
 		textureFile = "gfx/interface/goals/Focus_POV_Socialism_Goverment.dds"
 	}
+	
+		spriteType = {
+		name = focus_POV_Krestyanskiy_bunt
+		textureFile = "gfx/interface/goals/Focus_POV_Krestyanskiy_bunt.dds"
+	}
 
 	spriteType = {
 		name = focus_POV_create_government
