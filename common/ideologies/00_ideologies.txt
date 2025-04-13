@@ -67,6 +67,21 @@ ideologies = {
 	}
 
 
+	socialism = { #социализм
+		types = {
+			socialism = { #социализм
+			}
+			orthodoxian-socialism = { #Христиан-социализм
+			}
+		}
+		color = { 180 0 0 }
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = no
+		}
+	}
+
 	communism = {
 
 		types = {
@@ -249,20 +264,5 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.15
 		
 		ai_give_core_state_control_threshold = 10000
-	}
-
-	socialism = { #социализм
-		types = {
-			socialism = { #социализм
-			}
-			orthodoxian-socialism = { #Христиан-социализм
-			}
-		}
-		color = { 180 0 0 }
-		rules = {
-			can_force_government = yes
-			can_send_volunteers = yes
-			can_puppet = no
-		}
 	}
 }
