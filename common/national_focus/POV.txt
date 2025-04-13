@@ -7,7 +7,7 @@ focus_tree={
 
 focus = {
 id = POV_Krestyanskiy_bunt
-icon = GFX_focus_ARG_air_force
+icon = focus_POV_Krestyanskiy_bunt
 cost = 0.15
 x = 8 y = 0
 completion_reward={ 
