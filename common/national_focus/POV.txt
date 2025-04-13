@@ -189,7 +189,7 @@ focus = {
 
     focus = {
         id = create_goverment
-        icon = GFX_surrender_tiny_flag
+        icon = GFX_focus_POV_create_government
         cost = 5
         prerequisite = { focus = POV_Buy_soldiers }
         prerequisite = { focus = POV_Intervantion }

@@ -199,10 +199,10 @@ POVbunt={
 }
 
 POVcrisis = {
-	POV_hugry = {
+	POV_hungry = {
 		visible = { tag = POV }
-		icon = x
-		days_remove = 90
+		icon = GFX_decision_SWI_consolidate_council_power
+		days_remove = 45
 		fire_only_once = no
 		complete_effect = {
 			if = {
@@ -234,9 +234,25 @@ POVcrisis = {
 					}
 				}
 				POV = {
-					activate_decision = POV_hugry
+					activate_decision = POV_hungry
+
+				}
+			}
+			activate_decision = POV_hungry
+		}
+    }
+	POV_hyperinflation = {
+		visible = { tag = POV }
+		icon = GFX_decision_generic_factory
+		days_remove = 45
+		fire_only_once = no
+		complete_effect = {
+			activate_decision = POV_hyperinflation
+			if = {
+				limit = {					
+					POV = { has_idea = POV_hypeinflation }
 				}
 			}
 		}
-    }
+	}
 }
