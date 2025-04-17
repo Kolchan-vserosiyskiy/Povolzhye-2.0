@@ -17,10 +17,16 @@ interwar_artillery = 1
 gw_artillery = 1
 }
 
+add_opinion_modifier = {
+	target = GER
+	modifier = cheat_opinion_modifier_bad
+}
 recruit_character = POV_Lyupov
 recruit_character = POV_Kalinin
-recruit_character = POV_Krasnov
 recruit_character = POV_Chernov
+recruit_character = POV_Krasnov
+recruit_character = SOV_andrey_vlasov
+recruit_character = SOV_ivan_chernyakhovsky
 add_ideas = POV_vosstaliease_pepla
 
 set_politics = {

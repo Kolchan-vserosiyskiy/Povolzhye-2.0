@@ -83,8 +83,7 @@ focus = {
     prerequisite = { focus = POV_Agitaciya_v_tylu_vraga }
     x = 3 y = 3
     completion_reward = {
-        add_ideas = POV_nazists 
-        country_event=POV.1
+        country_event = POV.1
     }
 }
 
@@ -167,7 +166,7 @@ focus = {
     prerequisite = { focus = POV_Krestyanskiy_bunt }
     x = 6 y = 3
     completion_reward = {
-        unlock_decision_category_tooltip=POVnationalization
+        unlock_decision_category_tooltip = POVnationalization
         capital_scope = {
             create_unit = {
                 division = Krestyane 
@@ -426,5 +425,14 @@ focus = {
             }
         }
     }
+}
+
+focus = {
+    id = POV_mobilisation
+    icon = GFX_surrender_tiny_flag
+    cost = 2
+    x = 7
+    y = 10
+    completion_reward = { }
 }
 }

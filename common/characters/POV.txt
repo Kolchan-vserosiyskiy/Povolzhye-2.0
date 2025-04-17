@@ -14,19 +14,14 @@ id = -1
         }
     }
 
-    POV_Krasnov = {
+POV_Krasnov = {
     name = POV_Krasnov
     portraits = {
         civilian = {
             large = GFX_Portrait_Krasnov
         }
     }
-    country_leader = {
-        ideology = fascism_ideology
-        expire = "1947.1.16"
-        id = -1
-        }
-    }
+}
 
 POV_Chernov = {
     name = POV_Chernov

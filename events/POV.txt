@@ -7,6 +7,11 @@ country_event = {
 	title = POV.1.t
 	desc = POV.1.d
 	picture = GFX_report_event_lithuania_army
+	trigger = {
+		POV = {
+			has_completed_focus = POV_Call_Everyone
+		}
+	}
 
 	fire_only_once = yes
 	
@@ -60,6 +65,21 @@ country_event = {
 					producer = JAP }
 					add_ideas = POV_nazists  
 					country_event = POV.2
+			hidden_effect = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.17
+				}
+					add_country_leader_role = {
+						character = POV_Krasnov
+						promote_leader = yes
+						country_leader = {
+							ideology = fascism_ideology
+							expire = "1947.1.1"
+							traits = { }
+						}
+					}
+		}
 	}
 	
 	option = {
@@ -75,8 +95,21 @@ country_event = {
 				add_equipment_to_stockpile = {
 					type = artillery_equipment
 					amount = 100
-					producer = JAP } 
+					producer = JAP 
+				} 
 					country_event = POV.2 
+					hidden_effect = {
+						add_country_leader_role = {
+							character = POV_Krasnov
+							promote_leader = yes
+							country_leader = {
+								ideology = fascism_ideology
+								expire = "1947.1.1"
+								traits = { }
+							}
+						
+						}
+					}
 	}
 
 	option = {
