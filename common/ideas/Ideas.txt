@@ -187,7 +187,7 @@ ideas = {
             industrial_capacity_factory = -0.30
             industrial_capacity_dockyard = -0.30
             industry_repair_factor = -0.60
-            stability_factor = 0.10
+            stability_factor = -0.10
             stability_weekly = -0.1
             war_support_weekly = -0.1
             political_power_gain = -0.1
@@ -213,7 +213,7 @@ ideas = {
                 industrial_capacity_factory = -0.35
                 industrial_capacity_dockyard = -0.35
                 industry_repair_factor = -0.65
-                stability_factor = 0.15
+                stability_factor = -0.15
                 stability_weekly = -0.1
                 war_support_weekly = -0.1
                 political_power_gain = -0.5
@@ -242,7 +242,28 @@ ideas = {
                 war_support_weekly = -0.1
                 political_power_gain = -0.1
                 max_fuel_factor = -0.1
-                    }
                 }
             }
         }
+    }
+    
+    ideas = {
+        country = {
+            POV_Economic_recovery = { #Экономическое восстановление
+                removal_cost = -1
+                allowed = { tag = POV }
+                visible = { has_completed_focus = POV_Free_Trade }
+                picture = generic_economic_increase
+
+                modifier = {
+                    production_speed_buildings_factor = 0.20
+                    consumer_goods_factor = 0.2
+                    industrial_capacity_factory = 0.15
+                    industrial_capacity_dockyard = 0.15
+                    industry_repair_factor = 0.30
+                    stability_factor = -0.1
+                    war_support_weekly = -0.1
+                }
+            }
+        }
+    }

@@ -9,7 +9,8 @@ on_actions = {
     on_startup = {
         effect = {
             POV = {
-                activate_decision = POV_hugry
+                activate_decision = POV_hungry
+                activate_decision = POV_hyperinflation
             }
         }
     }

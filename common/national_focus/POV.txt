@@ -1,17 +1,17 @@
-focus_tree={
-    id=POV country = {
-        factor=0
-         modifier = { add=10 tag=POV }
+focus_tree = {
+    id = POV country = {
+        factor = 0
+         modifier = { add = 10 tag = POV }
         }
-    default=no
+    default = no
 
 focus = {
 id = POV_Krestyanskiy_bunt
 icon = focus_POV_Krestyanskiy_bunt
 cost = 0.15
 x = 8 y = 0
-completion_reward={ 
-    add_political_power=100 
+completion_reward = { 
+    add_political_power = 100 
     add_war_support = 0.4 
     add_ideas = POV_hungry_peoples1
     add_ideas = Pov_hyperinflation }
@@ -21,10 +21,10 @@ focus = {
 id = POV_Unpack
 icon = focus_POV_reserv
 cost = 1.00
-prerequisite = { focus=POV_Get_gold }
+prerequisite = { focus = POV_Get_gold }
 x=18 y=2
-completion_reward={ add_equipment_to_stockpile = {
-type=infantry_equipment
+completion_reward = { add_equipment_to_stockpile = {
+type = infantry_equipment
 amount = 4000
 producer = SOV }  
     }
@@ -38,23 +38,25 @@ focus = {
     x = 3 y = 1
     completion_reward = { 
     POV = { country_event = POV.3 }
-    division_template={
+    division_template = {
         name = "Desertiry"
-        is_locked  =yes
+        is_locked = yes
         division_names_group = POV_INF_02
         priority = 1
         template_counter = 1
-        regiments = {infantry = { x = 0 y = 0 }
-                   infantry = { x = 0 y = 1 }
-                   infantry = { x = 0 y = 2 }
-                   infantry = { x = 1 y = 0 }
-                   infantry = { x = 1 y = 1 }
-                   infantry = { x = 1 y = 2 }
-                   infantry = { x = 2 y = 0 }
-                   infantry = { x = 2 y = 1 }
-                   infantry = { x = 2 y = 2 }
+        regiments = {
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 2 y = 0 }
+                    infantry = { x = 2 y = 1 }
+                    infantry = { x = 2 y = 2 }
                 }
-                    support = { artillery = { x = 0 y = 0 }
+                    support = { 
+                        artillery = { x = 0 y = 0 }
                     }
     }
                 SOV = {
@@ -90,21 +92,21 @@ focus = {
     id=POV_Get_enevy_aviation
     icon=GFX_focus_generic_cas_aircraft
     cost=0.50
-    prerequisite={focus=POV_Krestyanskiy_bunt}
-    x=12
-    y=1 
+    prerequisite = { focus = POV_Krestyanskiy_bunt }
+    x = 12
+    y = 1 
     completion_reward = {
         add_equipment_to_stockpile = {
             type = small_plane_cas_airframe 
-            amount=100 
-            variant_name="Plane From USSR"
+            amount = 100 
+            variant_name = "I-16"
         }
     }
 }
 
 
-focus={
-    id=POV_Get_gold
+focus = {
+    id = POV_Get_gold
     icon = GFX_focus_usa_reestablish_the_gold_standard
     cost = 0.40
     prerequisite = { focus = POV_Krestyanskiy_bunt }
@@ -123,6 +125,7 @@ focus = {
     prerequisite = { focus = POV_Call_Everyone }
     x = 3 y = 5
     completion_reward = { 
+        add_political_power = -20 
         division_template = {
                   name = "Наёмники"
                   is_locked = yes
@@ -145,7 +148,6 @@ focus = {
             create_unit = {
                 division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}
         }
-            add_political_power = -20 
     }
 }
 
@@ -155,7 +157,7 @@ focus = {
     cost = 1.00
     prerequisite = { focus = POV_Unpack }
     x = 17 y = 3
-            completion_reward = { unlock_decision_category_tooltip = POVrinok }
+    completion_reward = { unlock_decision_category_tooltip = POVrinok }
 }
 
 focus = {
@@ -166,7 +168,7 @@ focus = {
     x = 6 y = 3
     completion_reward = {
         unlock_decision_category_tooltip=POVnationalization
-        capital_scope={
+        capital_scope = {
             create_unit = {
                 division = Krestyane 
                      owner = POV 
@@ -189,7 +191,7 @@ focus = {
 
     focus = {
         id = create_goverment
-        icon = GFX_focus_POV_create_government
+        icon = focus_POV_create_government
         cost = 5
         prerequisite = { focus = POV_Buy_soldiers }
         prerequisite = { focus = POV_Intervantion }
@@ -236,7 +238,7 @@ focus = {
     }
 
 
-    #DEMCRATIC TREE
+    #DEMOCRATIC TREE
 focus = {
     id = POV_Democratic_Goverment
     icon = GFX_goal_support_democracy
@@ -298,7 +300,6 @@ focus = {
                 add_idea = POV_hyperinflation_2
             }
         }
-
     }
 }
 

@@ -8,17 +8,22 @@ POVnationalization = {
 		controls_state = 580
 		controls_state = 825
 		controls_state = 579 
-		controls_state = 262}
+		controls_state = 262
+		}
 		cost = 100
 		fire_only_once = yes
 		complete_effect = { 
-		397={add_core_of=POV}
-		581={add_core_of=POV}
-		580={add_core_of=POV}
-		825={add_core_of=POV}
-		579={add_core_of=POV}
-		262={add_core_of=POV}}
-		ai_will_do={factor=1}}
+		397 = { add_core_of = POV }
+		581 = { add_core_of = POV }
+		580 = { add_core_of = POV }
+		825 = { add_core_of = POV }
+		579 = { add_core_of = POV }
+		262 = { add_core_of = POV }
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
 
 	POV_nat_centre = {
 		icon = decision_generic_speech
@@ -33,17 +38,17 @@ POVnationalization = {
 		cost = 100
 		fire_only_once = yes
 		complete_effect = {
-		252={add_core_of=POV}
-		833={add_core_of=POV}
-		400={add_core_of=POV}
-		255={add_core_of=POV}
-		351={add_core_of=POV}
+		252 = { add_core_of = POV }
+		833 = { add_core_of = POV } 
+		400 = { add_core_of = POV }
+		255 = { add_core_of = POV } 
+		351 = { add_core_of = POV }
 		}
 	}
 }
 
-POVbunt={
-	POV_bunt_Moscow={
+POVbunt = {
+	POV_bunt_Moscow = {
 		icon=decision_generic_speech
 		available={
 		has_completed_focus = POV_Intervantion
@@ -107,9 +112,9 @@ POVbunt={
 					owner=SEV
 					allow_spawning_on_enemy_provs=yes
 					count=5}}
-			213={transfer_state_to =SEV}
+			213 = { transfer_state_to = SEV }
 			213 = {
-					create_unit={
+					create_unit = {
 					division="name=\"Повстанцы\"division_template=\"Повстанцы\"start_experience_factor=0.14 start_equipment_factor=1.0"
 					owner=SEV
 					allow_spawning_on_enemy_provs=yes
@@ -130,70 +135,68 @@ POVbunt={
 		}
 	}
 	
-	POVrinok = {
-		POV_infantry = {
-			icon = decision_generic_speech
-			available = { tag = POV has_completed_focus = POV_Rinok } 
-			fire_only_once = no
-			days_re_enable = 20
-			cost = 10
-			complete_effect = { add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1000
-			}	}
+POVrinok = {
+	POV_infantry = {
+		icon = decision_generic_speech
+		available = { tag = POV has_completed_focus = POV_Rinok } 
+		fire_only_once = no
+		days_re_enable = 20
+		cost = 10
+		complete_effect = { add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			}
 		}
+	}
 
-		POV_artilery = {
-			icon = decision_generic_speech
-			available = { tag = POV has_completed_focus = POV_Rinok } 
-			fire_only_once = no
-			days_re_enable = 20
-			cost = 30
-			complete_effect = { 
-				add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 500
+	POV_artilery = {
+		icon = decision_generic_speech
+		available = { tag = POV has_completed_focus = POV_Rinok } 
+		fire_only_once = no
+		days_re_enable = 20
+		cost = 30
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 500
 			}	
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
 				amount = 500
 			}
-
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
 				amount = 500
 			}
-				}
 		}
+	}
 
-		POV_supply = {
-			icon = decision_generic_speech
-			available = { tag = POV has_completed_focus = POV_Rinok } 
-			fire_only_once = no
-			days_re_enable = 20
-			cost = 20
-			complete_effect = { 
-				add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 500
-				}
+	POV_supply = {
+		icon = decision_generic_speech
+		available = { tag = POV has_completed_focus = POV_Rinok } 
+		fire_only_once = no
+		days_re_enable = 20
+		cost = 20
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
 			}
 		}
+	}
 
-		POV_trucks = {
-			visible = {
-				tag = POV		
-				}
-			icon = decision_generic_speech
-			available = { tag = POV has_completed_focus = POV_Rinok } 
-			fire_only_once = no
-			days_re_enable = 20
-			cost = 15
-			complete_effect = { 
-					add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 500
-				}
+	POV_trucks = {
+		visible = { tag = POV}	
+		icon = decision_generic_speech
+		available = { tag = POV has_completed_focus = POV_Rinok } 
+		fire_only_once = no
+		days_re_enable = 20
+		cost = 15
+		complete_effect = { 
+			add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+			}
 		}
 	}
 }
@@ -204,7 +207,7 @@ POVcrisis = {
 		icon = GFX_decision_SWI_consolidate_council_power
 		days_remove = 45
 		fire_only_once = no
-		complete_effect = {
+		remove_effect = {			
 			if = {
 				limit ={
 					POV = {
@@ -233,24 +236,93 @@ POVcrisis = {
 					has_idea = POV_hungry_peoples1
 					}
 				}
-				POV = {
-					activate_decision = POV_hungry
-
-				}
+				add_stability = -0.05
+				add_war_support = -0.01
 			}
-			activate_decision = POV_hungry
+			hidden_effect = {
+				activate_decision = POV_hungry
+			}
 		}
-    }
+	}
 	POV_hyperinflation = {
 		visible = { tag = POV }
 		icon = GFX_decision_generic_factory
 		days_remove = 45
 		fire_only_once = no
-		complete_effect = {
-			activate_decision = POV_hyperinflation
+		remove_effect = {
 			if = {
 				limit = {					
-					POV = { has_idea = POV_hypeinflation }
+					POV = { has_idea = POV_hyperinflation }
+				}
+				swap_ideas = {
+					remove_idea = POV_hyperinflation
+					add_idea = POV_hyperinflation_1
+				}
+			}
+			else_if = {
+				limit = {
+					POV = {
+						has_idea = POV_hyperinflation_2
+					}
+				}
+				swap_ideas = {
+					remove_idea = POV_hyperinflation_2
+					add_idea = POV_hyperinflation
+				}
+			}
+			else_if = {
+				limit = { 
+					POV = {
+						has_idea = POV_hyperinflation_1
+					}
+				}
+				add_stability = -0.5
+				add_war_support = -0.01
+			}
+			hidden_effect = {
+				activate_decision = POV_hyperinflation
+			}
+		}
+	}
+	POV_Economic_recovery = {
+		visible = { has_completed_focus = POV_Free_Trade }
+		icon = x
+		days_remove = 40
+		fire_only_once = no
+		cost = 50
+		complete_effect = {
+			if = {
+				limit = {
+					POV = {
+						has_idea = POV_hyperinflation_2
+					}
+				}
+				remove_ideas = POV_hyperinflation_2
+				add_timed_idea = {
+					idea = POV_Economic_recovery
+					days = 180
+				}
+			}
+			else_if = {
+				limit = { 
+					POV = {
+						has_idea = POV_hyperinflation
+					}
+				}
+				swap_ideas = {
+					remove_idea = POV_hyperinflation
+					add_idea = POV_hyperinflation_2
+				}
+			}
+			else_if = {
+				limit = {
+					POV = {
+						has_idea = POV_hyperinflation_1
+					}
+				}
+				swap_ideas = {
+					remove_idea = POV_hyperinflation_1
+					add_idea = POV_hyperinflation
 				}
 			}
 		}
