@@ -45,19 +45,19 @@ focus = {
         priority = 1
         template_counter = 1
         regiments = {
-                    infantry = { x = 0 y = 0 }
-                    infantry = { x = 0 y = 1 }
-                    infantry = { x = 0 y = 2 }
-                    infantry = { x = 1 y = 0 }
-                    infantry = { x = 1 y = 1 }
-                    infantry = { x = 1 y = 2 }
-                    infantry = { x = 2 y = 0 }
-                    infantry = { x = 2 y = 1 }
-                    infantry = { x = 2 y = 2 }
-                }
-                    support = { 
-                        artillery = { x = 0 y = 0 }
-                    }
+            infantry = { x = 0 y = 0 }
+            infantry = { x = 0 y = 1 }
+            infantry = { x = 0 y = 2 }
+            infantry = { x = 1 y = 0 }
+            infantry = { x = 1 y = 1 }
+            infantry = { x = 1 y = 2 }
+            infantry = { x = 2 y = 0 }
+            infantry = { x = 2 y = 1 }
+            infantry = { x = 2 y = 2 }
+        }
+        support = { 
+             artillery = { x = 0 y = 0 }
+        }
     }
                 SOV = {
                     delete_unit = {
@@ -88,9 +88,9 @@ focus = {
 }
 
 focus = {
-    id=POV_Get_enevy_aviation
-    icon=GFX_focus_generic_cas_aircraft
-    cost=0.50
+    id = POV_Get_enevy_aviation
+    icon=  GFX_focus_generic_cas_aircraft
+    cost = 0.50
     prerequisite = { focus = POV_Krestyanskiy_bunt }
     x = 12
     y = 1 
@@ -184,7 +184,7 @@ focus = {
     prerequisite = { focus = POV_Unite_Peoples }
     x = 6 y = 5
     completion_reward = {
-        unlock_decision_category_tooltip=POVbunt
+        unlock_decision_category_tooltip = POVbunt
     }
 }
 
@@ -428,11 +428,37 @@ focus = {
 }
 
 focus = {
-    id = POV_mobilisation
+    id = POV_mobilisation1 #За землю (добровольная)
     icon = GFX_surrender_tiny_flag
     cost = 2
-    x = 7
+    prerequisite = { focus = POV_Democratic_Goverment }
+    mutually_exclusive = { focus = POV_mobilisation1 }
+    x = 9
     y = 10
-    completion_reward = { }
+    completion_reward = { 
+        random_list = {
+            75 = {
+                capital_scope = {
+                    create_unit = {
+                        division = "Krestyane"
+                        owner = POV
+                        count = 6                    
+                    }
+                }
+                add_stability = -0.05
+            }
+
+            25 = {
+                capital_scope = {
+                    create_unit = {
+                        division = "Krestyane"
+                        owner = POV
+                        count = 8
+                    }
+                }
+            }
+        }
+    }
 }
 }
+

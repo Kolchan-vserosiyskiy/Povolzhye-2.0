@@ -12,6 +12,12 @@ on_actions = {
                 activate_decision = POV_hungry
                 activate_decision = POV_hyperinflation
             }
+            GER = {
+                add_opinion_modifier = {
+                    target = POV
+                    modifier = cheat_opinion_modifier_bad
+                }
+            }
         }
     }
 }
