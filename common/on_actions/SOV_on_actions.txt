@@ -2,12 +2,8 @@ on_actions = {
     on_startup = {
         effect = { 
             SOV = {
-                country_event = { id = soviet.77 days = 1 }
+                country_event = { id = soviet.77 days = 10 }
             }
-        }
-    }
-    on_startup = {
-        effect = {
             POV = {
                 activate_decision = POV_hungry
                 activate_decision = POV_hyperinflation

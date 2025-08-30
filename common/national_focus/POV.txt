@@ -5,206 +5,208 @@ focus_tree = {
         }
     default = no
 
-focus = {
-id = POV_Krestyanskiy_bunt
-icon = focus_POV_Krestyanskiy_bunt
-cost = 0.15
-x = 8 y = 0
-completion_reward = { 
-    add_political_power = 100 
-    add_war_support = 0.4 }
-}
-
-focus = {
-    id = POV_Unpack
-    icon = focus_POV_reserv
-    cost = 1.00
-    prerequisite = { focus = POV_Get_gold }
-    x = 18 y = 2
-    completion_reward = { 
-        add_equipment_to_stockpile = {
-            type = infantry_equipment
-            amount = 4000
-            producer = SOV 
-        }  
+    focus = {
+        id = POV_Krestyanskiy_bunt
+        icon = focus_POV_Krestyanskiy_bunt
+        cost = 0.15
+        x = 8 y = 0
+        completion_reward = { 
+            add_political_power = 100 
+            add_war_support = 0.4 }
     }
-}
 
-focus = {
-    id = POV_Agitaciya_v_tylu_vraga
-    icon = GFX_focus_FIN_parmis_devils
-    cost = 0.15
-    prerequisite = { focus = POV_Krestyanskiy_bunt }
-    x = 3 y = 1
-    completion_reward = { 
-    POV = { 
-        country_event = POV.3 
-    }
-    division_template = {
-        name = "Desertiry"
-        is_locked = yes
-        division_names_group = POV_INF_02
-        priority = 1
-        template_counter = 1
-        regiments = {
-            infantry = { x = 0 y = 0 }
-            infantry = { x = 0 y = 1 }
-            infantry = { x = 0 y = 2 }
-            infantry = { x = 1 y = 0 }
-            infantry = { x = 1 y = 1 }
-            infantry = { x = 1 y = 2 }
-            infantry = { x = 2 y = 0 }
-            infantry = { x = 2 y = 1 }
-            infantry = { x = 2 y = 2 }
-        }
-        support = { 
-             artillery = { x = 0 y = 0 }
+    focus = {
+        id = POV_Unpack
+        icon = focus_POV_reserv
+        cost = 1.00
+        prerequisite = { focus = POV_Get_gold }
+        x = 18 y = 2
+        completion_reward = { 
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 4000
+                producer = SOV 
+            }  
         }
     }
-                SOV = {
-                    195 = {
-                        delete_units = yes
-                        }
-                    }
+
+    focus = {
+        id = POV_Agitaciya_v_tylu_vraga
+        icon = GFX_focus_FIN_parmis_devils
+        cost = 0.15
+        prerequisite = { focus = POV_Krestyanskiy_bunt }
+        x = 3 y = 1
+        completion_reward = { 
+            POV = { 
+                country_event = POV.3 
+            }
+            division_template = {
+                name = "Desertiry"
+                is_locked = yes
+                division_names_group = POV_INF_02
+                priority = 1
+                template_counter = 1
+                regiments = {
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 2 y = 0 }
+                    infantry = { x = 2 y = 1 }
+                    infantry = { x = 2 y = 2 }
                 }
-    
-        capital_scope = {
-            create_unit = { 
-                division = "name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"
-                    owner = POV 
-                    count = 3 
-            }       
-        }        
-    }
-}
-
-focus = {
-    id  = POV_Call_Everyone
-    icon = GFX_focus_SOV_mobilization_plan
-    cost = 0.50
-    prerequisite = { focus = POV_Agitaciya_v_tylu_vraga }
-    x = 3 y = 3
-    completion_reward = {
-        country_event = POV.1
-    }
-}
-
-focus = {
-    id = POV_Get_enevy_aviation
-    icon=  GFX_focus_generic_cas_aircraft
-    cost = 0.50
-    prerequisite = { focus = POV_Krestyanskiy_bunt }
-    x = 12
-    y = 1 
-    completion_reward = {
-        add_equipment_to_stockpile = {
-            type = small_plane_cas_airframe 
-            amount = 100 
-            variant_name = "I-16"
-        }
-    }
-}
-
-
-focus = {
-    id = POV_Get_gold
-    icon = GFX_focus_usa_reestablish_the_gold_standard
-    cost = 0.40
-    prerequisite = { focus = POV_Krestyanskiy_bunt }
-        available = {
-            249 = { is_controlled_by = POV
+                support = { 
+                    artillery = { x = 0 y = 0 }
+                }
+            }
+            SOV = {
+                195 = {
+                    delete_units = yes
+                }
             }
         }
-    x = 18 y = 1
-    completion_reward = { add_political_power = 100 }
-}
-
-focus = {
-    id = POV_Buy_soldiers
-    icon = GFX_goal_unknown
-    cost = 2.00
-    prerequisite = { focus = POV_Call_Everyone }
-    x = 3 y = 5
-    completion_reward = { 
-        add_political_power = -20 
-        division_template = {
-                  name = "Наёмники"
-                  is_locked = yes
-                  regiments = { 
-                  infantry = { x = 0 y = 0 }
-                  infantry = { x = 0 y = 1 }
-                  infantry = { x = 0 y = 2 } 
-                  infantry = { x = 0 y = 3 }
-                  infantry = { x = 1 y = 0 }
-                  infantry = { x = 1 y = 1 }
-                  infantry = { x = 1 y = 2 }
-                  infantry = { x = 1 y = 3 }
-                }
-            support = { 
-                engineer = { x = 0 y = 0 }
-                artillery = { x = 0 y = 1}
+        
+            capital_scope = {
+                create_unit = { 
+                    division = "name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"
+                        owner = POV 
+                        count = 3 
+                }       
             }        
         }
-        capital_scope = {
-            create_unit = {
-                division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}
+
+    focus = {
+        id  = POV_Call_Everyone
+        icon = GFX_focus_SOV_mobilization_plan
+        cost = 0.50
+        prerequisite = { focus = POV_Agitaciya_v_tylu_vraga }
+        x = 3 y = 3
+        completion_reward = {
+            country_event = POV.1
         }
     }
-}
 
-focus = {
-    id = POV_Rinok
-    icon = GFX_goal_unknown
-    cost = 1.00
-    prerequisite = { focus = POV_Unpack }
-    x = 17 y = 3
-    completion_reward = { unlock_decision_category_tooltip = POVrinok }
-}
-
-focus = {
-    id = POV_Unite_Peoples
-    icon = GFX_focus_ETH_freedom_at_gunpoint
-    cost = 7.15
-    prerequisite = { focus = POV_Krestyanskiy_bunt }
-    x = 6 y = 3
-    completion_reward = {
-        unlock_decision_category_tooltip = POVnationalization
-        capital_scope = {
-            create_unit = {
-                division = Krestyane 
-                     owner = POV 
-                    count = 5 
+    focus = {
+        id = POV_Get_enevy_aviation
+        icon=  GFX_focus_generic_cas_aircraft
+        cost = 0.50
+        prerequisite = { focus = POV_Krestyanskiy_bunt }
+        x = 12
+        y = 1 
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = small_plane_cas_airframe 
+                amount = 100 
+                variant_name = "I-16"
             }
         }
     }
-}
 
-focus = {
-    id = POV_Intervantion
-    icon = GFX_focus_generic_workers
-    cost = 5
-    prerequisite = { focus = POV_Unite_Peoples }
-    x = 6 y = 5
-    completion_reward = {
-        unlock_decision_category_tooltip = POVbunt
+
+    focus = {
+        id = POV_Get_gold
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        cost = 0.40
+        prerequisite = { focus = POV_Krestyanskiy_bunt }
+            available = {
+                249 = { is_controlled_by = POV
+                }
+            }
+        x = 18 y = 1
+        completion_reward = { add_political_power = 100 }
     }
-}
+
+    focus = {
+        id = POV_Buy_soldiers
+        icon = GFX_goal_unknown
+        cost = 2.00
+        prerequisite = { focus = POV_Call_Everyone }
+        x = 3 y = 5
+        completion_reward = { 
+            add_political_power = -20 
+            division_template = {
+                    name = "Наёмники"
+                    is_locked = yes
+                    regiments = { 
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 } 
+                    infantry = { x = 0 y = 3 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 1 y = 3 }
+                    }
+                support = { 
+                    engineer = { x = 0 y = 0 }
+                    artillery = { x = 0 y = 1}
+                }        
+            }
+            capital_scope = {
+                create_unit = {
+                    division = "name=\"Дивизия наёмников\"division_template=\"Наёмники\"start_experience_factor=1.0start_equipment_factor=1.0"owner=POV count=5}
+            }
+        }
+    }
+
+    focus = {
+        id = POV_Rinok
+        icon = GFX_goal_unknown
+        cost = 1.00
+        prerequisite = { focus = POV_Unpack }
+        x = 17 y = 3
+        completion_reward = { unlock_decision_category_tooltip = POVrinok }
+    }
+
+    focus = {
+        id = POV_Unite_Peoples
+        icon = GFX_focus_ETH_freedom_at_gunpoint
+        cost = 7.15
+        prerequisite = { focus = POV_Krestyanskiy_bunt }
+        x = 6 y = 3
+        completion_reward = {
+            unlock_decision_category_tooltip = POVnationalization
+            capital_scope = {
+                create_unit = {
+                    division = Krestyane 
+                        owner = POV 
+                        count = 5 
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = POV_Intervantion
+        icon = GFX_focus_generic_workers
+        cost = 5
+        prerequisite = { focus = POV_Unite_Peoples }
+        x = 6 y = 5
+        completion_reward = {
+            unlock_decision_category_tooltip = POVbunt
+        }
+    }
 
     focus = {
         id = create_goverment
         icon = focus_POV_create_government
-        cost = 5
+        cost = 2
         prerequisite = { focus = POV_Buy_soldiers }
         prerequisite = { focus = POV_Intervantion }
         x = 5
         y = 6
-        completion_reward = { country_event = POV.4 }
+        completion_reward = { 
+            country_event = POV.4 
+            add_stability = 0.05 }
     }
 
     focus = {
         id = POV_Socialism_Goverment
         icon = focus_POV_Socialism_Goverment
         cost = 1
+        allow_branch = { POV = { has_country_flag = POV_Socialism } }
         prerequisite = { focus = create_goverment }
         mutually_exclusive = {
             focus = POV_Fascism_Goverment
@@ -217,6 +219,7 @@ focus = {
                 ideology = socialism
                 popularity = 0.1
             }
+            mark_focus_tree_layout_dirty = yes
         }
     }
 
@@ -224,6 +227,7 @@ focus = {
         id = POV_Fascism_Goverment
         icon = GFX_goal_support_fascism
         cost = 1
+        allow_branch = { POV = { has_country_flag = POV_Fascism } }
         prerequisite = { focus = create_goverment }
         mutually_exclusive = {
             focus = POV_Socialism_Goverment
@@ -235,36 +239,39 @@ focus = {
             ideology = fascism
             popularity = 0.1
             }
+            mark_focus_tree_layout_dirty = yes
         }
     }
 
 
-    #DEMOCRATIC TREE
-focus = {
-    id = POV_Democratic_Goverment
-    icon = GFX_goal_support_democracy
-    cost = 1
-    prerequisite = { focus = create_goverment }
-    mutually_exclusive = {
-        focus = POV_Fascism_Goverment
-        focus = POV_Socialism_Goverment
-    }
-    x = 5
-    y = 8
-    completion_reward = { add_popularity = {
-        ideology = democratic
-        popularity = 0.1
+        #DEMOCRATIC TREE
+    focus = {
+        id = POV_Democratic_Goverment
+        icon = GFX_goal_support_democracy
+        allow_branch = { POV = { has_country_flag = POV_Democratic } }
+        cost = 1
+        prerequisite = { focus = create_goverment }
+        mutually_exclusive = {
+            focus = POV_Fascism_Goverment
+            focus = POV_Socialism_Goverment
+        }
+        x = 5
+        y = 8
+        completion_reward = { add_popularity = {
+            ideology = democratic
+            popularity = 0.1
+            }
+            mark_focus_tree_layout_dirty = yes
         }
     }
-}
 
-focus = {
-    id = POV_Free_Trade
-    icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
-    cost = 3.00
-    prerequisite = { focus = POV_Democratic_Goverment }
-    x = 2 y = 10
-    completion_reward = {           
+    focus = {
+        id = POV_Free_Trade
+        icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+        cost = 3.00
+        prerequisite = { focus = POV_underground_workshops }
+        x = 2 y = 10
+        completion_reward = {           
             if = {
                 limit = { has_idea = POV_hungry_peoples1 }
                 swap_ideas = {
@@ -272,195 +279,203 @@ focus = {
                     add_idea = POV_hungry_peoples
                 }
             }
-        else_if = {
-            limit = {  has_idea = POV_hungry_peoples }
-            swap_ideas = {
-                remove_idea = POV_hungry_peoples
-                add_idea = POV_hungry_peoples2
-            }
-        }
-        else_if = {
-            limit = { has_idea = POV_hungry_peoples2 }
-            remove_ideas = POV_hungry_peoples2
-        }            
-        else_if = {
-            limit = { has_idea = POV_hyperinflation_2 }
-            remove_ideas = POV_hyperinflation_2
-        }
-        else_if = {
-            limit = { has_idea = POV_hyperinflation_1 }
-            swap_ideas = {
-                remove_idea = POV_hyperinflation_1
-                add_idea = POV_hyperinflation
-            }
-        }
-        else_if = {
-            limit = { has_idea = POV_hyperinflation }
-            swap_ideas = {
-                remove_idea = POV_hyperinflation
-                add_idea = POV_hyperinflation_2
-            }
-        }
-    }
-}
-
-focus = {
-    id = POV_Chuvash_industry
-    icon = GFX_surrender_tiny_flag
-    cost = 5
-    prerequisite = { focus = POV_Free_Trade }
-    available = { 
-         POV = {
-            controls_state = 256
-        }
-    }
-    x = 0
-    y = 12
-    completion_reward = { 
-        256 = {
-            add_building_construction = {
-            type = arms_factory
-            level = 1
-            }
-            add_building_construction = {
-                type = industrial_complex
-                level = 1
-            }
-        }
-    }
-}
-
-focus = {
-    id = POV_Tatarstan_industry
-    icon = GFX_surrender_tiny_flag
-    cost = 5
-    prerequisite = { focus = POV_Free_Trade }
-    available = { 
-        POV = { controls_state = 249 }
-    }
-    x = 4
-    y = 12
-    completion_reward = { 
-        256 = {
-            add_building_construction = {
-                type = arms_factory
-                level = 2
-            }
-            add_building_construction = {
-                type = industrial_complex
-                level = 1
-            }
-        }
-    }
-}
-
-focus = {
-    id = POV_Izhevsk_industry
-    icon = GFX_surrender_tiny_flag
-    cost = 5
-    prerequisite = { focus = POV_Free_Trade }
-    available = { 
-        POV = { controls_state = 399}
-    }
-    x = 2
-    y = 12
-    completion_reward = { 
-        399 = {
-            add_building_construction = {
-                type = arms_factory
-                level = 3
-            }
-        }
-    }
-}
-
-focus = { #Зов о помощи
-    id = POV_Call_Foreign
-    icon = GFX_surrender_tiny_flag
-    cost = 5
-    prerequisite = { focus = POV_Democratic_Goverment }
-    x = 14
-    y = 10
-    completion_reward = { 
-        random_list = {
-            33 = {            
-                add_equipment_to_stockpile = {
-                    type = infantry_equipment
-                    amount = 2000
+            else_if = {
+                limit = {  has_idea = POV_hungry_peoples }
+                swap_ideas = {
+                    remove_idea = POV_hungry_peoples
+                    add_idea = POV_hungry_peoples2
                 }
             }
+            else_if = {
+                limit = { has_idea = POV_hungry_peoples2 }
+                remove_ideas = POV_hungry_peoples2
+            }            
+            else_if = {
+                limit = { has_idea = POV_hyperinflation_2 }
+                remove_ideas = POV_hyperinflation_2
+            }
+            else_if = {
+                limit = { has_idea = POV_hyperinflation_1 }
+                swap_ideas = {
+                    remove_idea = POV_hyperinflation_1
+                    add_idea = POV_hyperinflation
+                }
+            }
+            else_if = {
+                limit = { has_idea = POV_hyperinflation }
+                swap_ideas = {
+                    remove_idea = POV_hyperinflation
+                    add_idea = POV_hyperinflation_2
+                }
+            }
+        }
+    }
+    focus = {
+        id = POV_underground_workshops
+        icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+        cost = 1
+        prerequisite = { focus = POV_Democratic_Goverment }
+        x = 2 y = 9
+        completion_reward = {   
+            add_ideas = { POV_low_quality_weapon }
+        }
+    }
+
+    focus = {
+        id = POV_Chuvash_industry
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        prerequisite = { focus = POV_Free_Trade }
+        available = { 
+            POV = {
+                controls_state = 256
+            }
+        }
+        x = 0
+        y = 12
+        completion_reward = { 
+            256 = {
+                add_building_construction = {
+                type = arms_factory
+                level = 1
+                }
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = POV_Tatarstan_industry
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        prerequisite = { focus = POV_Free_Trade }
+        available = { 
+            POV = { controls_state = 249 }
+        }
+        x = 4
+        y = 12
+        completion_reward = { 
+            256 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                }
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = POV_Izhevsk_industry
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        prerequisite = { focus = POV_Free_Trade }
+        available = { POV = { controls_state = 399}}
+        x = 2
+        y = 12
+        completion_reward = { 
+            399 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                }
+            }
+        }
+    }
+
+    focus = { #Зов о помощи
+        id = POV_Call_Foreign
+        icon = GFX_surrender_tiny_flag
+        cost = 5
+        prerequisite = { focus = POV_Democratic_Goverment }
+        x = 14
+        y = 10
+        completion_reward = { 
+            random_list = {
+                33 = {            
+                    add_equipment_to_stockpile = {
+                        type = infantry_equipment
+                        amount = 2000
+                    }
+                }
                 33 = {
                     add_equipment_to_stockpile = {
                         type = infantry_equipment
                         amount = 2000
                     }
-                        add_equipment_to_stockpile = {
-                            type = support_equipment
-                            amount = 1000
+                    add_equipment_to_stockpile = {
+                        type = support_equipment
+                        amount = 1000
+                    }
+                }
+                33 = { }
+            }
+        }
+    }
+
+    focus = {
+        id = Give_guns_to_people
+        icon = GFX_surrender_tiny_flag
+        cost = 0.5
+        prerequisite = { focus = POV_Krestyanskiy_bunt }
+        x =  8
+        y = 2
+        completion_reward = { 
+            249 = {
+                create_unit = {
+                    division = Krestyane
+                    owner = POV
+                    count = 2
+                    
+                }
+            }
+            399 = {
+                create_unit = {
+                    division = Krestyane
+                    owner = POV
+                    count = 2
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = POV_mobilisation1 #За землю (добровольная)
+        icon = GFX_surrender_tiny_flag
+        cost = 2
+        prerequisite = { focus = POV_Democratic_Goverment }
+        mutually_exclusive = { focus = POV_mobilisation1 }
+        x = 9
+        y = 10
+        completion_reward = { 
+            random_list = {
+                50 = {
+                    capital_scope = {
+                        create_unit = {
+                            division = "Krestyane"
+                            owner = POV
+                            count = 6                    
                         }
-                }
-            33 = { }
-        }
-    }
-}
-
-focus = {
-    id = Give_guns_to_people
-    icon = GFX_surrender_tiny_flag
-    cost = 0.5
-    prerequisite = { focus = POV_Krestyanskiy_bunt }
-    x =  8
-    y = 2
-    completion_reward = { 
-        249 = {
-            create_unit = {
-                division = Krestyane
-                owner = POV
-                count = 2
-            }
-        }
-        399 = {
-            create_unit = {
-                division = Krestyane
-                owner = POV
-                count = 2
-            }
-        }
-    }
-}
-
-focus = {
-    id = POV_mobilisation1 #За землю (добровольная)
-    icon = GFX_surrender_tiny_flag
-    cost = 2
-    prerequisite = { focus = POV_Democratic_Goverment }
-    mutually_exclusive = { focus = POV_mobilisation1 }
-    x = 9
-    y = 10
-    completion_reward = { 
-        random_list = {
-            75 = {
-                capital_scope = {
-                    create_unit = {
-                        division = "Krestyane"
-                        owner = POV
-                        count = 6                    
                     }
-                }
                 add_stability = -0.05
-            }
-
-            25 = {
-                capital_scope = {
-                    create_unit = {
-                        division = "Krestyane"
-                        owner = POV
-                        count = 8
+                }
+                50 = {
+                    capital_scope = {
+                        create_unit = {
+                            division = "Krestyane"
+                            owner = POV
+                            count = 8
+                        }
                     }
                 }
             }
         }
     }
-}
 }
 

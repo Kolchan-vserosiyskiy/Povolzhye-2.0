@@ -262,3 +262,23 @@ ideas = {
         }
     }
 }
+
+ideas = {
+    country = {
+        POV_low_quality_weapon = { #Оружие низкого качества
+            removal_cost = -1
+            allowed = { tag = POV }
+            picture = generic_military_increase
+            equipment_bonus = {
+                infantry = {
+                    build_cost_ic = -0.1
+                    reliability = -0.1
+                }
+                support_equipment = {
+                    build_cost_ic = -0.1
+                    reliability = -0.1
+                }
+            }
+        }
+    }
+}

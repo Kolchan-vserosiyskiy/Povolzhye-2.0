@@ -237,6 +237,9 @@ country_event = {
 			ruling_party = socialism
 		}
 		complete_national_focus = POV_Socialism_Goverment
+		hidden_effect = {
+			set_country_flag = POV_Socialism
+		}
 	}
 
 
@@ -249,6 +252,9 @@ country_event = {
 			ruling_party = fascism
 		}
 		complete_national_focus = POV_Fascism_Goverment
+		hidden_effect = {
+			set_country_flag = POV_Fascism
+		}
 	}
 
 	option = {
@@ -260,6 +266,9 @@ country_event = {
 			ruling_party = democratic
 		}
 		complete_national_focus = POV_Democratic_Goverment
+		hidden_effect = {
+			set_country_flag = POV_Democratic
+		}
 	}
 }
 
