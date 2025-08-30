@@ -2946,7 +2946,7 @@ option = {
 				complete_national_focus = POV_Krestyanskiy_bunt
 				inherit_technology = SOV #Передача технологий от совка
 			}
-			news_event = news.1000
+		news_event = news.1000
 }		
 	option = {
 		name = soviet.77.b

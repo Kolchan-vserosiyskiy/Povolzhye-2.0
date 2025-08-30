@@ -25,8 +25,6 @@ recruit_character = POV_Lyupov
 recruit_character = POV_Kalinin
 recruit_character = POV_Chernov
 recruit_character = POV_Krasnov
-recruit_character = SOV_andrey_vlasov
-recruit_character = SOV_ivan_chernyakhovsky
 add_ideas = POV_vosstaliease_pepla
 
 set_politics = {
@@ -35,7 +33,6 @@ last_election = "1935.12.31"
 election_frequency = 48
 elections_allowed = no
 }
-army_experience = 25
 
 set_popularities = {
 neutrality = 8
