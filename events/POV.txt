@@ -284,3 +284,15 @@ country_event = {
 		name = POV.5
 	}
 }
+
+country_event = { #Стартовая ситуация
+	id = POV.6 
+	title = POV.6.t
+	desc = POV.6.d
+	picture = 
+	fire_only_once = yes
+
+	option = {
+		name = POV.6.a
+	}
+}

@@ -1,8 +1,12 @@
 focus_tree = {
-    id = POV country = {
-        factor = 0
-         modifier = { add = 10 tag = POV }
+    id = POV 
+    country = { 
+        factor = 1
+        modifier = {
+            add = 10
+            tag = POV
         }
+    } 
     default = no
 
     focus = {
@@ -11,8 +15,13 @@ focus_tree = {
         cost = 0.15
         x = 8 y = 0
         completion_reward = { 
-            add_political_power = 100 
-            add_war_support = 0.4 }
+            add_political_power = 25
+            add_war_support = 0.4 
+            country_event = {
+                id = POV.6
+                hours = 1
+            }
+        }
     }
 
     focus = {
@@ -22,6 +31,7 @@ focus_tree = {
         prerequisite = { focus = POV_Get_gold }
         x = 18 y = 2
         completion_reward = { 
+            add_command_power = -10
             add_equipment_to_stockpile = {
                 type = infantry_equipment
                 amount = 4000
@@ -116,8 +126,7 @@ focus_tree = {
         cost = 0.40
         prerequisite = { focus = POV_Krestyanskiy_bunt }
             available = {
-                249 = { is_controlled_by = POV
-                }
+                249 = { is_controlled_by = POV }
             }
         x = 18 y = 1
         completion_reward = { add_political_power = 100 }
@@ -331,7 +340,7 @@ focus_tree = {
                     level = 2
                 }
             hidden_effect = {
-                pp = -25
+                add_political_power = -25
                 add_ideas = { POV_low_quality_weapon }
             }
         }

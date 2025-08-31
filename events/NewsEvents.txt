@@ -4,8 +4,10 @@ news_event = { #НАЧАЛО ВОССТАНИЯ В ПОВОЛЖЬЕ
 	id = news.1000
 	title = news.1000.t
 	desc = news.1000.d
-	picture = GFX_news_event_1000_image
-	major = yes
+	picture = GFX_news_event_100
+	trigger = {
+		has_completed_focus = POV_Krestyanskiy_bunt
+	}
 
 	fire_only_once = yes
 
