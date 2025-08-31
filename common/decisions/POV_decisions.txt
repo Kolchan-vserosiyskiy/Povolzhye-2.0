@@ -138,7 +138,11 @@ POVbunt = {
 POVrinok = {
 	POV_infantry = {
 		icon = decision_generic_speech
-		available = { tag = POV has_completed_focus = POV_Rinok } 
+		available = { tag = POV } 
+		visible = {
+			tag = POV
+			has_completed_focus = POV_Rinok
+		}
 		fire_only_once = no
 		days_re_enable = 20
 		cost = 10
@@ -151,29 +155,37 @@ POVrinok = {
 
 	POV_artilery = {
 		icon = decision_generic_speech
-		available = { tag = POV has_completed_focus = POV_Rinok } 
+		available = { tag = POV } 
+		visible = {
+			tag = POV
+			has_completed_focus = POV_Rinok
+		}
 		fire_only_once = no
 		days_re_enable = 20
-		cost = 30
+		cost = 35
 		complete_effect = { 
 			add_equipment_to_stockpile = {
 			type = artillery_equipment
-			amount = 500
+			amount = 100
 			}	
 			add_equipment_to_stockpile = {
 				type = anti_air_equipment
-				amount = 500
+				amount = 100
 			}
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-				amount = 500
+				amount = 50
 			}
 		}
 	}
 
 	POV_supply = {
 		icon = decision_generic_speech
-		available = { tag = POV has_completed_focus = POV_Rinok } 
+		available = { tag = POV } 
+		visible = {
+			tag = POV
+			has_completed_focus = POV_Rinok
+		}
 		fire_only_once = no
 		days_re_enable = 20
 		cost = 20

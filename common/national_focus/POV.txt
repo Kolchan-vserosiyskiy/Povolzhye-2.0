@@ -66,16 +66,19 @@ focus_tree = {
                     delete_units = yes
                 }
             }
+            hidden_effect = {
+                POV = {
+                    capital_scope = {
+                        create_unit = { 
+                            division = "name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"
+                                owner = POV 
+                                count = 3 
+                        }       
+                    }        
+                }
+            }
         }
-        
-            capital_scope = {
-                create_unit = { 
-                    division = "name=\"Desertiry\"division_template=\"Desertiry\"start_experience_factor=0.6start_equipment_factor=0.79"
-                        owner = POV 
-                        count = 3 
-                }       
-            }        
-        }
+    }
 
     focus = {
         id  = POV_Call_Everyone
@@ -97,14 +100,16 @@ focus_tree = {
         y = 1 
         completion_reward = {
             add_equipment_to_stockpile = {
-                type = small_plane_cas_airframe 
-                amount = 100 
-                variant_name = "I-16"
-            }
+                type = small_plane_airframe_1
+                producer = "SOV" 
+                amount = 30
+                version_name = "I-16"
+		    }
+            
         }
+        
     }
-
-
+    
     focus = {
         id = POV_Get_gold
         icon = GFX_focus_usa_reestablish_the_gold_standard
@@ -316,8 +321,19 @@ focus_tree = {
         cost = 1
         prerequisite = { focus = POV_Democratic_Goverment }
         x = 2 y = 9
+        select_effect = {
+            
+        }
         completion_reward = {   
-            add_ideas = { POV_low_quality_weapon }
+                custom_effect_tooltip = POV_underground_workshops_tooltip
+                add_offsite_building = {
+                    type = arms_factory
+                    level = 2
+                }
+            hidden_effect = {
+                pp = -25
+                add_ideas = { POV_low_quality_weapon }
+            }
         }
     }
 

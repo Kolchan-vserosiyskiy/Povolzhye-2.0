@@ -70,7 +70,7 @@ country_event = {
 					hidden_effect = {
 						add_popularity = {
 						ideology = fascism
-						popularity = 0.17
+						popularity = 0.10
 					}
 					add_country_leader_role = {
 						character = POV_Krasnov
@@ -88,8 +88,8 @@ country_event = {
 		name = POV.1.b #Только снаряжение
 		ai_chance = { factor = 50 }
 		trigger = { }
-		add_stability = -0.4
-			add_war_support = 4
+		add_stability = -0.2
+			add_war_support = 0.2
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = 2000
@@ -101,6 +101,10 @@ country_event = {
 				} 
 					country_event = POV.2 
 					hidden_effect = {
+						add_popularity = {
+							ideology = fascism
+							popularity = 0.05
+						}
 						add_country_leader_role = {
 							character = POV_Krasnov
 							promote_leader = yes
@@ -153,10 +157,7 @@ country_event = {
 				infantry = { x = 1 y = 1 }
 			}
 			support = { 
-				artillery = {
-					x = 0
-					y = 0
-					} 
+				artillery = { x = 0	y = 0 } 
 				}
 			}
 			capital_scope = {
